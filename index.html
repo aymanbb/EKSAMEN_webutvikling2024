@@ -11,26 +11,28 @@
 <body>
     <div id="main-grid">
         <header>
-            <nav>
-                <form>
-                    <label for="search"></label>
-                    <input type="search" placeholder="søk her" id="search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <!-- <input type="submit" value=""> -->
-                </form>
-                <div class="logo" id="header-logo">
-                    <a href="index.html"><i class="fa-brands fa-linux"></i></a>
-                </div>
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="product.html">Produkter</a></li>
-                    <li><a href="#">Kategorier</a></li>
-                    <li><a href="#">Kontakt oss</a>
-                </ul>
+            <form>
+                <label for="search"></label>
+                <input type="search" placeholder="søk her" id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <!-- <input type="submit" value=""> -->
+            </form>
+            <div class="logo" id="header-logo">
+                <a href="index.html"><i class="fa-brands fa-linux"></i></a>
+            </div>
+            <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="product.html">Produkter</a></li>
+                <li><a href="#">Kategorier</a></li>
+                <li><a href="#">Kontakt oss</a>
+            </ul>
             </nav>
-            <a href="#"><i class="fa-regular fa-user"></i></a>
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
-            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <nav>
+                <a href="#"><i class="fa-regular fa-user"></i></a>
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </nav>
         </header>
         <main>
             <section id="forside-banner">
@@ -39,7 +41,7 @@
                 <p>Etiam tristique orci mauris, eu elementum dolor laoreet a. Quisque ac aliquet nulla.</p>
                 <a href="#" class="btn" title="Trykk for å lese mer om våre produkter.">LES MER</a>
             </section>
-            <section id="popular-prod">
+            <section id="pop-products">
                 <h1>Våre mest populære produkter</h1>
                 <p>Oppdag det beste av det beste</p>
                 <a href="#" class="btn">New Product</a>
@@ -76,29 +78,31 @@
                     <p>Kr 1999</p>
                 </article>
             </section>
-            <section id="popular-cat">
-                <h1>Våre mest populære kategorier</h1>
-                <p>Oppdag det beste av det beste</p>
-                <article>
-                    <h2>Category 1</h2>
-                    <img src="https://picsum.photos/300/200" alt="">
-                </article>
-                <article>
-                    <h2>Category 2</h2>
-                    <img src="https://picsum.photos/300/200" alt="">
-                </article>
-                <article>
-                    <h2>Category 3</h2>
-                    <img src="https://picsum.photos/300/200" alt="">
-                </article>
-                <article>
-                    <h2>Category 4</h2>
-                    <img src="https://picsum.photos/300/200" alt="">
-                </article>
-                <article>
-                    <h2>Category 5</h2>
-                    <img src="https://picsum.photos/300/200" alt="">
-                </article>
+            <div id="cat-flex">
+                <section id="pop-categories">
+                    <h1>Våre mest populære kategorier</h1>
+                    <p>Oppdag det beste av det beste</p>
+                    <article>
+                        <h2>Category 1</h2>
+                        <img src="https://picsum.photos/300/200" alt="">
+                    </article>
+                    <article>
+                        <h2>Category 2</h2>
+                        <img src="https://picsum.photos/300/200" alt="">
+                    </article>
+                    <article>
+                        <h2>Category 3</h2>
+                        <img src="https://picsum.photos/300/200" alt="">
+                    </article>
+                    <article>
+                        <h2>Category 4</h2>
+                        <img src="https://picsum.photos/300/200" alt="">
+                    </article>
+                    <article>
+                        <h2>Category 5</h2>
+                        <img src="https://picsum.photos/300/200" alt="">
+                    </article>
+                <div>
             </section>
             <section id="reviews">
                 <h2>Anmeldelser</h2>
@@ -140,7 +144,7 @@
             <section id="footer-contact">
                 <h3>Kontakt</h3>
                 <ul>
-                    <li><b>Adresse:</b> B R A veien 4, 1757 Halden</li>
+                    <li><b>Adresse:</b> B R A veien 4, 1757 Halden</li> <!-- Husk å sjekke om du kan gjøre spesifikke deler av tekst bold i CSS istedenfor -->
                     <li><b>Telefon:</b> 69 60 80 00</li>
                     <li><b>E-post:</b> halden@hiof.no</li>
                     <li><b>Åpningstider:</b> Stenger 15:00</li>

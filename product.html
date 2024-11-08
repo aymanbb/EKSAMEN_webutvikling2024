@@ -11,33 +11,37 @@
 <body>
     <div id="product-grid">
         <header>
-            <nav>
-                <form>
-                    <label for="search"></label>
-                    <input type="search" placeholder="søk her" id="search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <!-- <input type="submit" value=""> -->
-                </form>
-                <div class="logo" id="header-logo">
-                    <a href="index.html"><i class="fa-brands fa-linux"></i></a>
-                </div>
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="product.html">Produkter</a></li>
-                    <li><a href="#">Kategorier</a></li>
-                    <li><a href="#">Kontakt oss</a>
-                </ul>
+            <form>
+                <label for="search"></label>
+                <input type="search" placeholder="søk her" id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <!-- <input type="submit" value=""> -->
+            </form>
+            <div class="logo" id="header-logo">
+                <a href="index.html"><i class="fa-brands fa-linux"></i></a>
+            </div>
+            <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="product.html">Produkter</a></li>
+                <li><a href="#">Kategorier</a></li>
+                <li><a href="#">Kontakt oss</a>
+            </ul>
             </nav>
-            <a href="#"><i class="fa-regular fa-user"></i></a>
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
-            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <ul class="breadcrumb">
+            <nav>
+                <a href="#"><i class="fa-regular fa-user"></i></a>
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </nav>
+        </header>
+        <main>
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="#">Kategori</a></li>
                 <li><a href="#">Produktnavn</a></li>
             </ul>
-        </header>
-        <main>
+            </nav>
             <div id="product-box"> <!-- Bruker div her fordi section krever heading, noe jeg ikke trenger her -->
                 <article id="product">
                     <img src="https://picsum.photos/300/300" alt="">
