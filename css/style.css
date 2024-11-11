@@ -12,11 +12,12 @@ body {
     font-family: 'Roboto' ,sans-serif, Arial, Helvetica;
 }
 
-h1{font-size: 1.2rem;}
-h2{font-size: 1rem;}
-h3{font-size: 0.8rem;}
+h1{font-size: 1.4rem;;}
+h2{font-size: 1.2rem;}
+h3{font-size: 1rem;}
 h4{font-size: 0.8rem;}
-p, a{font-size: 0.6rem;}
+p, a{font-size: 0.8rem;
+    font-weight: 500;}
 
 #main-grid {
     display: grid;
@@ -35,6 +36,7 @@ header {
 main {
     grid-column: 1/2;
     grid-row: 2/3;
+    margin: auto auto 3rem auto;
 }
 
 footer {
@@ -42,11 +44,15 @@ footer {
     grid-row: 3/3;
 }
 
+.fa-linux {
+    font-size: 2.5rem;
+}
+
 #search-bar {
     align-self: center;
     display: flex;
-    flex-direction: column;
-    padding: 2px;
+    flex-direction: row;
+    padding: 4px;
     border: 2px solid #000000;
     border-radius: 20px;
     margin: 10px 0 10px;
@@ -56,10 +62,10 @@ footer {
         border: none;
         background: transparent;
         margin: 0;
-        padding: 8px;
+        padding: 4px;
         font-size: 14px;
         color: inherit;
-        border: 0px solid transparent;
+        border: 2px solid transparent;
         border-radius: inherit;
     }
 
@@ -80,8 +86,8 @@ footer {
 
     button[type="submit"]:focus,
     input[type="search"]:focus {
-      box-shadow: 0 0 3px 0 #1183d6;
-      border-color: #1183d6;
+      box-shadow: 0 0 3px 0 lightgrey;
+      border-color: lightgrey;
       outline: none;
       border-radius: 20px;
     }
@@ -102,7 +108,6 @@ footer {
     }
 
     i {
-        font-size: 2.5rem;
         margin: 20px 0 20px 0;
     }
 
@@ -144,9 +149,8 @@ footer {
     background-size: cover;
 
     h1 {
-    font-size: 1.4rem;
     line-height: 1.7rem;
-    width: 26%;
+    width: 31%;
     margin: 3rem 2.5rem 0rem 0;
     gap: 1rem;
     font-weight: 750;
@@ -154,14 +158,13 @@ footer {
 
     p {
         width: 30%;
-        font-weight: 600;
-        margin: 2rem 2.5rem 0rem 0;
+        margin: 0.5rem 2.5rem 0rem 0;
     }
 
     a {
         text-decoration: none;
         font-weight: 500;
-        margin: 1rem 2.5rem 0 0;
+        margin: 0.5rem 2.5rem 0 0;
     }
 }
 
@@ -171,11 +174,266 @@ footer {
     border: 1.5px solid #ffffff;
     padding: 0.8rem;
     background-color: #ffffff;
-    border-radius: 25px;
+    border-radius: 35px;
 }
 
 #pop-products {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 10px;
+
+    h1 {
+        display: inline-block;
+        align-self: center;
+        width: 80%;
+    }
+}
+
+#pop-btn {
+    margin: 30px 0 80px 0;
+
+    a {
+        text-decoration: none;
+        color: #000000;
+        border: 1px solid #000000;
+        padding: 0.6rem;
+        background-color: #ffffff;
+        border-radius: 35px;
+    }
+
+    a:hover {
+        color: #ffffff;
+        background-color: #000000;
+    }
+}
+
+.product-card {
+    position: relative;
+    height: 550px;
+
+    picture {
+        width: 100%;
+
+        img {
+            width: 100%;
+            border-radius: 25px;
+        }
+    }
+
+    i.fa-heart {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        color: grey;
+        border-radius: 20px;
+        background: grey;
+        padding: 0.5rem;
+        opacity: 0.8;
+        filter: blur(5);
+        text-shadow: /* Ikke perfekt, vil finne en erstatning senere */
+            0px 0px 1px black, /* top */
+            0px 1px 1px black, /* right */
+            1px 0px 1px black, /* bottom */
+            0px -1px 1px black; /* left */
+        
+    }
+
+    h3 {
+        display: inline;
+        position: absolute;
+        left: 0rem;
+        bottom: 4rem;
+    }
+
+    p {
+        display: inline;
+        position: absolute;
+        right: 0rem;
+        bottom: 4.3rem;
+    }
+
+    .product-review {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        left: 0rem;
+        bottom: 1rem
+    }
+}
+
+/*#cat-flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}*/
+
+#pop-categories {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    p {
+        margin-bottom: 3rem;
+    }
+
+    h1 {
+        display: inline-block;
+        align-self: center;
+        width: 80%;
+    }
+
+    article {
+        position: relative;
+        margin: 0 0 15px 0;
+        
+        picture {
+            width: 100%;
+
+            img {
+                width: 100%;
+                border-radius: 25px;
+                filter: blur(2px);
+            }
+        }
+
+        h2 {
+            position: absolute;
+            color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 999;
+        }
+    }
+}
+
+#reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10%;
+
+    h2 {
+        font-weight: 750;
+    }
+}
+
+
+
+.scroll-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    /*display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    gap: 0.5rem;*/
+
+    .review-card {
+        display: inline-block;
+        border: 1px solid rgba(128, 128, 128, 0.5);
+        border-radius: 25px;
+
+        img {
+            border-radius: 50px;
+            margin: 1rem 0 0 1rem;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding: 0;
+        }
+
+        p {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+    }
+}
+
+footer {
+    border-top: 1px solid black;
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+#footer-logo {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+#footer-contact {
+    grid-column: 1/3;
+    grid-row: 2/3;
+
+    h3 {
+        font-weight: 500;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        i {
+            padding-right: 1rem;
+        }
+    }
+
+    p {
+        display: inline;
+    }
+}
+
+#footer-shortcuts {
+    grid-column: 3/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    margin-left: 3rem;
+
+    h3 {
+        font-weight: 500;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+    }
+}
+
+#footer-some {
+    grid-column: 1/3;
+    grid-row: 3/3;
+
+    h3 {
+        font-weight: 500;
+    }
+
+    ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+
+        i {
+            font-size: 24px;
+            color: #000000;
+        }
+    }
 }
