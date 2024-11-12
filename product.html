@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ikoner/css/solid.css">
     <link rel="stylesheet" href="ikoner/css/fontawesome.css">
     <link rel="stylesheet" href="ikoner/css/brands.css">
-    <title>Min nettbutikk | Produktside</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Min nettbutikk | Forside</title>
 </head>
 <body>
-    <div id="product-grid">
+    <div id="main-grid">
         <header>
-            <form>
-                <label for="search"></label>
-                <input type="search" placeholder="søk her" id="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <!-- <input type="submit" value=""> -->
+            <form id="search-bar">
+                <label>
+                    <input type="search" placeholder="søk her" id="search">
+                 </label>
+                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <nav class="site-nav">
-            <ul>
-                <li><a href="/">Hjem</a></li>
-                <li><a href="product.html">Produkter</a></li>
-                <li><a href="/"><i class="fa-brands fa-linux"></i></a></li>
-                <li><a href="#">Kategorier</a></li>
-                <li><a href="#">Kontakt oss</a>
-            </ul>
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="product.html">Produkter</a></li>
+                </ul>
+                <a href="index.html"><i class="fa-brands fa-linux"></i></a>
+                <ul>
+                    <li><a href="#">Kategorier</a></li>
+                    <li><a href="#">Kontakt oss</a>
+                </ul>
             </nav>
-            <nav>
+            <nav class="customer-nav">
                 <a href="#"><i class="fa-regular fa-user"></i></a>
                 <a href="#"><i class="fa-regular fa-heart"></i></a>
                 <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -37,33 +40,39 @@
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="#">Kategori</a></li>
-                <li><a href="#">Produktnavn</a></li>
+                <li><span aria-current="page">Produktnavn</span></li>
             </ul>
             </nav>
-            <div id="product-box"> <!-- Bruker div her fordi section krever heading, noe jeg ikke trenger her -->
-                <article id="product">
-                    <img src="https://picsum.photos/300/300" alt="">
-                    <img src="https://picsum.photos/100/100" alt="">
-                    <img src="https://picsum.photos/100/100" alt="">
-                    <img src="https://picsum.photos/100/100" alt="">
-                    <h4>Produktnavn</h4>
-                    <a href="#">Merkenavn</a>
-                    <p>5 195 kr inkl. mva.</p>
-                    <p>Farge: <b>beige</b></p>
-                    <select id="size-menu" name="size">
-                        <option>Velg størrelse</option>
-                        <option>XS</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
-                    <form>
-                        <label for="add-cart"></label>
-                        <input type="submit" value="Legg i handlekurv" id="add-cart">
-                    </form>
+            <!-- <div id="product-box"> Bruker div her fordi section krever heading, noe jeg ikke trenger her -->
+            <section id="product-card">
+                <h2 class="visually-hidden">Produktnavn</h2>
+                <article>
+                    <img id="main-pic" src="https://picsum.photos/300/300" alt="">
+                    <img src="https://picsum.photos/97/97" alt="">
+                    <img src="https://picsum.photos/97/97" alt="">
+                    <img src="https://picsum.photos/97/97" alt="">
+                    <header>
+                        <h4>Produktnavn</h4>
+                        <a href="#">Merkenavn</a>
+                        <p>5 195 kr inkl. mva.</p>
+                        <p>Farge: <b>beige</b></p>
+                    </header>
+                    <div class="product-options">
+                        <select id="size-menu" name="size">
+                            <option>Velg størrelse</option>
+                            <option>XS</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                        <form>
+                            <label for="add-cart"></label>
+                            <input type="submit" value="Legg i handlekurv" id="add-cart">
+                        </form>
+                    </div>
                 </article>
-            </div>
+            </section>
         </main>
         <aside>
             <h3>Lignende produkter</h3>
@@ -117,21 +126,21 @@
             </article>
         </aside>
         <footer>
-            <section class="logo" id="footer-logo">
+            <section class="footer-logo" id="footer-logo">
                 <i class="fa-brands fa-linux"></i>
                 <h4>Vi er de beste på det vi gjør!</h4>
             </section>
             <section id="footer-contact">
-                <h3>Kontakt</h3>
+                <h3>KONTAKT</h3>
                 <ul>
-                    <li><b>Adresse:</b> B R A veien 4, 1757 Halden</li>
-                    <li><b>Telefon:</b> 69 60 80 00</li>
-                    <li><b>E-post:</b> halden@hiof.no</li>
-                    <li><b>Åpningstider:</b> Stenger 15:00</li>
+                    <li><i class="fa-solid fa-location-dot"></i><b>Adresse:</b> B R A veien 4, 1757 Halden</li> <!-- Husk å sjekke om du kan gjøre spesifikke deler av tekst bold i CSS istedenfor -->
+                    <li><i class="fa-solid fa-phone"></i><b>Telefon:</b> 69 60 80 00</li>
+                    <li><i class="fa-solid fa-envelope"></i><b>E-post:</b> halden@hiof.no</li>
+                    <li><i class="fa-solid fa-clock"></i><b>Åpningstider:</b> Stenger 15:00</li>
                 </ul>
             </section>
             <section id="footer-shortcuts">
-                <h3>Snarveier</h3>
+                <h3>SNARVEIER</h3>
                 <nav>
                     <ul>
                         <li><a href="#">Produkter</a></li>
@@ -141,7 +150,7 @@
                 </nav>
             </section>
             <section id="footer-some">
-                <h3>Sosiale medier</h3>
+                <h3>SOSIALE MEDIER</h3>
                 <ul>
                     <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>

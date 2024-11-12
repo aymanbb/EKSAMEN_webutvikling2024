@@ -19,10 +19,14 @@ h4{font-size: 0.8rem;}
 p, a{font-size: 0.8rem;
     font-weight: 500;}*/
 
+p, a{
+    font-weight: 500;
+}
+
 #main-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
 }
 
 header {
@@ -42,9 +46,14 @@ main {
     /*width: 100%;*/
 }
 
+aside {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
 footer {
     grid-column: 1/2;
-    grid-row: 3/3;
+    grid-row: 4/4;
     width: 100%;
 }
 
@@ -196,20 +205,26 @@ footer {
     h1 {
         display: inline-block;
         align-self: center;
-        width: 80%;
+        width: 70%;
     }
 }
 
 #pop-btn {
+    display: flex;
+    justify-content: space-evenly;
     margin: 30px 0 80px 0;
+    width: 100%;
+    
 
     a {
         text-decoration: none;
         color: #000000;
         border: 1px solid #000000;
-        padding: 0.6rem;
+        padding: 1rem;
+        margin: 0 0.5rem 0 0.5rem;
         background-color: #ffffff;
-        border-radius: 35px;
+        border-radius: 40px;
+        gap: 1rem;
     }
 
     a:hover {
@@ -219,6 +234,9 @@ footer {
 }
 
 .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Trenger strengt tatt ikke flex, tror jeg */
     position: relative;
     height: 550px;
 
@@ -227,15 +245,15 @@ footer {
 
         img {
             border-radius: 25px;
-            width: 100%;
+            width: 95%;
             max-height: 370px;
         }
     }
 
     i.fa-heart {
         position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
+        top: 0.8rem;
+        right: 1.5rem;
         color: grey;
         border-radius: 20px;
         background: grey;
@@ -250,22 +268,32 @@ footer {
         
     }
 
-    h3 {
-        display: inline-block;
-        padding-right: 5rem;
-    }
+    .product-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 10px;
 
-    p {
-        display: inline-block;
-        padding-left: 5rem;
-        font-weight: 600;
+        h3 {
+            padding-left: 0.6rem;
+        }
+
+        p {
+            padding: 0.25rem 0.6rem 0 0;
+        }
     }
 
     .product-review {
         display: flex;
         flex-direction: row;
         list-style: none;
-        padding: 0;
+        padding: 0 0 0 0.6rem;
+        align-self: flex-start;
+
+        h4 {
+            margin: 0 0 0 0.8rem;
+        }
     }
 }
 
@@ -275,13 +303,13 @@ footer {
     text-align: center;
 }*/
 
-#pop-categories {
+.pop-categories {
     display: flex;
     flex-direction: column;
     text-align: center;
     
     p {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
     h1 {
@@ -293,27 +321,33 @@ footer {
     article {
         position: relative;
         margin: 0 0 15px 0;
-        
-        picture {
-            width: 100%;
 
-            img {
-                width: 100%;
-                border-radius: 25px;
-                filter: blur(1px);
-            }
-        }
-
-        h2 {
-            position: absolute;
-            color: white;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 999;
-        }
     }
+
+    h2 {
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+    }
+}    
+
+.pop-categories article picture {
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.pop-categories article picture img { /* Special thanks to: https://jsfiddle.net/Will_law/Lo0n9g2y/ */
+    width: 105%;
+    height: 105%;
+    margin: -5px;
+    filter: blur(4px);
 }
 
 #reviews {
@@ -344,32 +378,40 @@ footer {
 .scroll-container {
     display: flex;
     flex-direction: row;
-    overflow: scroll;
+    overflow-x: auto;
     gap: 0.5rem;
     width: calc(100vw - 20px);
     align-self: center;
 
-
     article {
         border: 2px solid rgba(128, 128, 128, 0.3);
         border-radius: 25px;
-        padding: 1rem 6rem 4rem 1rem;
-        /*display: inline-block;*/
+        padding: 1rem;
+        flex: 0 0 250px; /* Width of each article for proper text wrapping */
+        /* box-sizing: border-box; */
 
         ul {
             padding: 0;
             list-style: none;
             display: flex;
             flex-direction: row;
+            gap: 0.5rem;
+
+            li {
+                margin: 0;
+                padding: 0;
+            }
         }
 
         img {
             border-radius: 50px;
+            width: 100px;
+            height: 100px;
         }
 
-        /*p {
-            display: block;
-        }*/
+        p {
+            margin: 0.5rem 0 0 0;
+        }
     }
 
 /*
@@ -484,3 +526,38 @@ footer {
         }
     }
 }
+
+.breadcrumb {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .breadcrumb ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+
+    li a{
+        text-decoration: none;
+        color: #000000;
+    }
+  }
+  
+  .breadcrumb li:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 .25rem;
+    content: "→";
+  }
+
+  #product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h2 {
+        display: none;
+    }
+  }
