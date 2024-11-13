@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="ikoner/css/fontawesome.css">
     <link rel="stylesheet" href="ikoner/css/brands.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Min nettbutikk | Forside</title>
+    <title>Min nettbutikk | Produktside</title>
 </head>
 <body>
     <div id="main-grid">
@@ -44,14 +44,21 @@
             </ul>
             </nav>
             <!-- <div id="product-box"> Bruker div her fordi section krever heading, noe jeg ikke trenger her -->
-            <section id="product-card">
+            <section id="product-menu">
                 <h2 class="visually-hidden">Produktnavn</h2>
                 <article>
-                    <img id="main-pic" src="https://picsum.photos/300/300" alt="">
-                    <img src="https://picsum.photos/97/97" alt="">
-                    <img src="https://picsum.photos/97/97" alt="">
-                    <img src="https://picsum.photos/97/97" alt="">
-                    <header>
+                    <div id="pics-container">
+                        <!-- <picture id="main-pic"> -->
+                        <picture id="big-pic">
+                            <img id="main-pic" src="https://picsum.photos/200/328" alt="">
+                        </picture>
+                        <picture id="smol-pics">
+                            <img src="https://picsum.photos/100/100" alt="">
+                            <img src="https://picsum.photos/100/100" alt="">
+                            <img src="https://picsum.photos/100/100" alt="">
+                        </picture>
+                    </div>
+                    <header class="product-info">
                         <h4>Produktnavn</h4>
                         <a href="#">Merkenavn</a>
                         <p>5 195 kr inkl. mva.</p>
