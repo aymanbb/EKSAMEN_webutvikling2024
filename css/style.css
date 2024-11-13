@@ -201,6 +201,7 @@ footer {
     flex-direction: column;
     text-align: center;
     margin-bottom: 10px;
+    gap: 3rem;
 
     h1 {
         display: inline-block;
@@ -236,36 +237,47 @@ footer {
 .product-card {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center; /* Trenger strengt tatt ikke flex, tror jeg */
     position: relative;
-    height: 550px;
 
     picture {
         width: 100%;
 
         img {
             border-radius: 25px;
-            width: 95%;
+            width: 100%;
             max-height: 370px;
+        }
+
+        .rec-prod-img { /* Lignende produkter bilde i product.html */
+            min-width: 200px;
+            min-height: 200px;
         }
     }
 
     i.fa-heart {
         position: absolute;
-        top: 0.8rem;
-        right: 1.5rem;
+        top: 0.6rem;
+        right: 0.6rem;
         color: grey;
         border-radius: 20px;
         background: grey;
         padding: 0.5rem;
         opacity: 0.8;
         filter: blur(5);
-        text-shadow: /* Ikke perfekt, vil finne en erstatning senere */
-            0px 0px 1px black, /* top */
-            0px 1px 1px black, /* right */
-            1px 0px 1px black, /* bottom */
-            0px -1px 1px black; /* left */
+        /*
+        text-shadow: * Ikke perfekt, vil finne en erstatning senere *
+            0px 0px 0px white, * top *
+            1px 1px 0px white, * right *
+            1px 0px 0px white, * bottom *
+            0px 1px 0px white; * left *
+        */
         
+        /* Awesome property, kanskje finn en måte å ha text-shadow
+           som backup for incompatible browsers (og få offsets til å funke) */
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: white;
     }
 
     .product-header {
@@ -276,17 +288,32 @@ footer {
         padding-top: 10px;
 
         h3 {
-            padding-left: 0.6rem;
 
             a {
-                text-decoration: none;
-                color: #000000;
                 font-weight: bold;
             }
         }
 
+        h5 {
+            
+            a {
+                font-weight: 800;
+                font-size: 1.2rem;
+            }
+        }
+
+        h3, h5 {
+
+            a {
+                text-decoration: none;
+                color: #000000;
+            }
+        }
+
+
         p {
-            padding: 0.25rem 0.6rem 0 0;
+            display: inline-block;
+            align-self: center;
         }
     }
 
@@ -294,11 +321,15 @@ footer {
         display: flex;
         flex-direction: row;
         list-style: none;
-        padding: 0 0 0 0.6rem;
+        padding: 0;
         align-self: flex-start;
 
-        h4 {
+        h4, h5{
             margin: 0 0 0 0.8rem;
+        }
+
+        h5 {
+            padding-top: 0.2rem;
         }
     }
 }
@@ -368,33 +399,19 @@ footer {
     }
 }
 
-
-
-/*.scroll-container {
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    gap: 1rem;
-    
-    align-self: center;
-    
-}*/
-
-.scroll-container {
+.scroll-container { /* Scroll container for review cards */
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    gap: 0.5rem;
-    width: calc(100vw - 20px);
+    gap: 1rem;
+    width: calc(100vw - 30px);
     align-self: center;
 
-    article {
+    .review-card {
         border: 2px solid rgba(128, 128, 128, 0.3);
         border-radius: 25px;
         padding: 1rem;
         flex: 0 0 250px; /* Width of each article for proper text wrapping */
-        /* box-sizing: border-box; */
 
         ul {
             padding: 0;
@@ -419,39 +436,6 @@ footer {
             margin: 0.5rem 0 0 0;
         }
     }
-
-/*
-.review-card {
-    border: 1px solid rgba(128, 128, 128, 0.5);
-    border-radius: 25px;
-    width: 12rem;
-    width: 60px;
-    display: inline;
-    
-
-    img {
-        border-radius: 50px;
-        margin: 1rem 0 0 1rem;
-        max-height: 50px;
-        max-width: 50px;
-    }
-
-    h4 {
-        margin: 1rem 0 0 1rem;
-    }
-
-    ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        padding: 0;
-        margin: 1rem 0 0 1rem;
-    }
-
-    p {
-        display: inline-block;
-    }
-*/
 }
 
 footer {
@@ -533,11 +517,13 @@ footer {
     }
 }
 
+/* PRODUCT SITE */
+
 .breadcrumb {
     width: 100%;
     margin-bottom: 1.5rem;
-    padding-left: 1rem;
     width: 100%;
+    padding-left: 1rem;
   }
   
   .breadcrumb ul {
@@ -552,11 +538,16 @@ footer {
         text-decoration: none;
         color: #000000;
     }
+
+    li span {
+        font-weight: 800;
+    }
+
   }
   
 .breadcrumb li:not(:last-child)::after {
     display: inline-block;
-    margin: 0 .25rem;
+    margin: 0 1rem;
     content: "→";
 }
 
@@ -570,42 +561,98 @@ footer {
 
 #pics-container {
     display: grid;
-    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     grid-template-rows: 1fr;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
     width: 100%;
+    gap: 1rem;
 }
 
-#big-pic {
-    grid-column: 2/3;
+.big-pic {
+    grid-column: 2/2;
     grid-row: 1/1;
-    /*display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center;*/
-    width: 60%;
-}
+    justify-content: center;
+    /*align-items: center;  may be redundant */
+    width: 100%;
 
-#main-pic {
-    max-width: 200px;
-}
-
-#smol-pics {
-    grid-column: 1/2;
-    grid-row: 1/1;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
-    gap: 0.8rem;
-    width: 40%;
-
-    img {
-        max-width: 100px;
+    img { /* id is #main-pic*/
+        width: 100%;
+        height: 100%;;
     }
 }
 
-/*.product-options {
+.smol-pics {
+    grid-column: 1/2;
+    grid-row: 1/1;
     display: flex;
     flex-direction: column;
-}*/
+    justify-content: space-between;
+    /*align-items: flex-end;  may be redundant */
+    gap: 0.6rem;
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        /*max-width: 160px;
+        max-height: 160px;*/
+    }
+}
+
+.product-info {
+
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 800;
+    }
+
+    a {
+        color: grey;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-top: 0; 
+    }
+}
+
+.product-actions {
+    display: flex;
+    flex-direction: row;
+    /*align-items: center;*/
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+
+    form {
+        width: 100%;
+    }
+
+    #add-cart {
+        width: 100%;
+        padding: 0.7rem;
+        color: #fff;
+        background: #000;
+    }
+
+    i {
+        display: flex;
+        
+        border: 1.5px solid #000;
+        padding: 0.7rem;
+    }
+}
+
+.size-menu {
+    width: 100%;
+    background-color: rgb(227, 227, 227);
+    padding: 0.7rem;
+    border-radius: 4px;
+}
+
+aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
+    margin-bottom: 3rem;
+}

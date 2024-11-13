@@ -49,88 +49,149 @@
                 <article>
                     <div id="pics-container">
                         <!-- <picture id="main-pic"> -->
-                        <picture id="big-pic">
-                            <img id="main-pic" src="https://picsum.photos/200/328" alt="">
+                        <picture class="big-pic">       <!-- TODO: add media -->
+                            <img id="main-pic" src="https://picsum.photos/200/400" alt="">
                         </picture>
-                        <picture id="smol-pics">
-                            <img src="https://picsum.photos/100/100" alt="">
-                            <img src="https://picsum.photos/100/100" alt="">
-                            <img src="https://picsum.photos/100/100" alt="">
+                        <picture class="smol-pics">     <!-- TODO: add media, and make sure this is semantic-->
+                            <img src="https://picsum.photos/160/160" alt="">
+                            <img src="https://picsum.photos/160/160" alt="">
+                            <img src="https://picsum.photos/160/160" alt="">
                         </picture>
                     </div>
                     <header class="product-info">
-                        <h4>Produktnavn</h4>
-                        <a href="#">Merkenavn</a>
+                        <h3>Produktnavn</h3>
+                        <a href="#">MERKENAVN</a>
                         <p>5 195 kr inkl. mva.</p>
                         <p>Farge: <b>beige</b></p>
                     </header>
-                    <div class="product-options">
-                        <select id="size-menu" name="size">
-                            <option>Velg størrelse</option>
-                            <option>XS</option>
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-                        </select>
+                    <select class="size-menu" name="size">
+                        <option>Velg størrelse</option>
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                    <div class="product-actions">
                         <form>
                             <label for="add-cart"></label>
                             <input type="submit" value="Legg i handlekurv" id="add-cart">
                         </form>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
+                    <details class="material">
+                        <summary>Materiale og vedlikehold</summary>
+                        <ul>
+                            <li><p>Overmateriale: 95% viskose, 5% elastan</p></li>
+                            <li><p>Materiale ermer: 100% polyester</p></li>
+                            <li><p>Materiale: Jersey</p></li>
+                        </ul>
+                    </details>
+                    <details class="prod-details">
+                        <summary>Produktdetaljer</summary>
+                        <p>
+                            Epcot is a theme park at Walt Disney World Resort featuring 
+                            exciting attractions, international pavilions, award-winning 
+                            fireworks and seasonal special events.
+                        </p>
+                    </details>
+                    <details class="size-tabel">
+                        <summary>Størrelsestabell</summary>
+                        <p>
+                            Sjekk hvordan din vanlige størrelse konverterer til andre
+                            størrelser i vår størrelsesguide. Husk at dette kun er en
+                            generell guide og at størrelsene kan variere i forhold til
+                            merke og modell.
+                        </p>
+                    </details>
+                    </details>
                 </article>
             </section>
         </main>
         <aside>
             <h3>Lignende produkter</h3>
-            <article class="product-card"> <!-- Trenger kanskje ikke id, kan style i CSS ved å nevne aside{ article{ } } -->
-                <img src="https://picsum.photos/300/200" alt="">
-                <h5>Product name</h5>
-                <p>Kr 1999</p>
-                <ul class="product-review">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                </ul>
-            </article>
-            <article class="product-card">
-                <img src="https://picsum.photos/300/200" alt="">
-                <h5>Product name</h5>
-                <p>Kr 1999</p>
-                <ul class="product-review">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                </ul>
-            </article>
-            <article class="product-card">
-                <img src="https://picsum.photos/300/200" alt="">
-                <h5>Product name</h5>
-                <p>Kr 1999</p>
-                <ul class="product-review">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                </ul>
-            </article>
-            <article class="product-card">
-                <img src="https://picsum.photos/300/200" alt="">
-                <h5>Product name</h5>
-                <p>Kr 1999</p>
-                <ul class="product-review">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                </ul>
-            </article>
+            <div class="scroll-container">  <!-- Trenger kanskje ikke id, kan style i CSS ved å nevne aside{ article{ } } -->
+                <article class="product-card">
+                    <picture>
+                        <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
+                        <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
+                        <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                    </picture>
+                    <i class="fa-regular fa-heart"></i>
+                    <header class="product-header">
+                        <h5><a href="product.html">Product name</a></h5>
+                        <p>Kr 1999</p>
+                    </header>
+                    <ul class="product-review">
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><h5>842 Reviews</h5></li>
+                    </ul>
+                </article>
+                <article class="product-card">
+                    <picture>
+                        <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
+                        <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
+                        <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                    </picture>
+                    <i class="fa-regular fa-heart"></i>
+                    <header class="product-header">
+                        <h5><a href="product.html">Product name</a></h5>
+                        <p>Kr 1999</p>
+                    </header>
+                    <ul class="product-review">
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><h5>842 Reviews</h5></li>
+                    </ul>
+                </article>
+                <article class="product-card">
+                    <picture>
+                        <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
+                        <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
+                        <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                    </picture>
+                    <i class="fa-regular fa-heart"></i>
+                    <header class="product-header">
+                        <h5><a href="product.html">Product name</a></h5>
+                        <p>Kr 1999</p>
+                    </header>
+                    <ul class="product-review">
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><h5>842 Reviews</h5></li>
+                    </ul>
+                </article>
+                <article class="product-card">
+                    <picture>
+                        <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
+                        <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
+                        <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                    </picture>
+                    <i class="fa-regular fa-heart"></i>
+                    <header class="product-header">
+                        <h5><a href="product.html">Product name</a></h5>
+                        <p>Kr 1999</p>
+                    </header>
+                    <ul class="product-review">
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><h5>842 Reviews</h5></li>
+                    </ul>
+                </article>
+            </div>
         </aside>
         <footer>
             <section class="footer-logo" id="footer-logo">
