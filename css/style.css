@@ -683,8 +683,16 @@ details {
     margin-top: 2.5rem;
 }
 
-#size-tabel {
+#size-table {
     border-bottom: 1.5px solid #000;
+
+    p {
+        width: 92%;
+    }
+
+    th, td {
+        font-size: 0.9rem;
+    }
 }
 
 details > summary::-webkit-details-marker {
