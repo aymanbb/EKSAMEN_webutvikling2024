@@ -18,7 +18,7 @@
                  </label>
                  <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-            <nav class="site-nav">
+            <nav id="site-nav">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="product.html">Produkter</a></li>
@@ -29,14 +29,14 @@
                     <li><a href="#">Kontakt oss</a>
                 </ul>
             </nav>
-            <nav class="customer-nav">
+            <nav id="customer-nav">
                 <a href="#"><i class="fa-regular fa-user"></i></a>
                 <a href="#"><i class="fa-regular fa-heart"></i></a>
                 <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </nav>
         </header>
         <main>
-            <nav aria-label="Breadcrumb" class="breadcrumb">
+            <nav aria-label="Breadcrumb" id="breadcrumb">
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="#">Kategori</a></li>
@@ -46,7 +46,7 @@
             <section id="product-menu">
                 <h2 class="visually-hidden">Produktnavn</h2>
                 <article>
-                    <div id="pics-container">
+                    <div id="product-pics"> <!-- figure & div behave differently w/ width, compare -->
                         <!-- <picture id="main-pic"> -->
                         <picture class="big-pic">       <!-- TODO: add media -->
                             <img id="main-pic" src="https://picsum.photos/200/400" alt="">
