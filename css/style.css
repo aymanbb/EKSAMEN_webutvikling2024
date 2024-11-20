@@ -14,6 +14,18 @@ body {
     font-family: 'Roboto' ,sans-serif, Arial, Helvetica;
 }
 
+/* Remove default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {font-weight: 500}
+
 /*
 h1{font-size: 1.4rem;;}
 h2{font-size: 1.2rem;}
@@ -128,10 +140,6 @@ footer {
         color: #000000;
     }
 
-    i {
-        margin: 20px 0 20px 0;
-    }
-
     ul {
         margin: auto;
         padding: 0;
@@ -155,11 +163,20 @@ footer {
 
 #customer-nav {
     align-self: center;
-    text-align: center;
-    margin: 20px 0 20px 0;
+    margin: 0px 0 20px 0;
     
     a {
         color: #000000;
+    }
+
+    i {
+        padding: 0.5rem;
+    }
+
+    i.fa-user, i.fa-heart {
+        color: white;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: black;
     }
 }
 
@@ -209,6 +226,7 @@ footer {
     flex-direction: column;
     text-align: center;
     gap: 15px;
+    margin: 2rem 0 4rem 0;
 
     h1 {
         align-self: center;
@@ -220,7 +238,7 @@ footer {
 #pop-btn {
     display: flex;
     justify-content: space-evenly;
-    margin: 25px 0 80px 0;
+    margin: 25px 0 60px 0;
     width: 100%;
     
 
@@ -435,8 +453,7 @@ footer {
 
         img {
             border-radius: 50px;
-            width: 100px;
-            height: 100px;
+            max-width: 150px;
         }
 
         p {
@@ -705,18 +722,32 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
 
 /* SHOPPING CART SITE */
 
+#keep-shopping-link {
+    text-decoration: none;
+    color: purple;
+    font-weight: 500;
+}
+
+#keep-shopping-link:not(:last-child)::before {
+    display: inline-block;
+    margin: 0 0.5rem 0 0;
+    content: "←";
+}
+
 #cart-header {
     text-align: center;
     font-weight: 800;
+    margin-top: 1rem;
 }
 
 #shopping-cart {
     /*display: flex;
     flex-direction: column;*/
-    margin: 3rem 0 1rem 0;
+    margin: 3rem 0 3rem 0;
+    border: 1px solid grey;
+    padding: 2rem;
 
     h2 {
-        margin-left: 30px;
         font-size: 1.6rem;
         font-weight: 800;
     }
@@ -724,24 +755,55 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
 
 .checkout-product {
 
-
     img {
         width: 200px;
-        margin: 0 0 30px 30px;
+        margin: 2rem 0;
     }
 
-    h4, p {
-        margin: 0 0 0 60px;
+    h4 {
+        /*display: inline-block;*/
+        margin: 0 0 0 30px;
+        font-weight: 800;
+    }
+
+    p {
+        margin: 0 0 0 30px;
     }
 
     i {
-        margin: 20px 0 20px 10px; /* Fix this */
+        margin: 3.5rem 0 1rem 0;
+    }
+
+    i.fa-heart {
+        padding: 0 0.5rem 0 2rem;
+        color: white;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
     }
 
 }
 
 .checkout-form {
     display: flex;
-    align-self: center;
     margin-top: 1.3rem;
+
+    p {
+        align-self: center;
+    }
+
+    label {
+        align-self: center;
+        font-weight: 500;
+
+        input {
+            padding: 0.7rem 0.3rem;
+        }
+    }
+}
+
+.cart-size-menu {
+    background-color: rgb(231, 231, 231);
+    margin: 0 10px 0 3px;
+    padding: 0.7rem 0.5rem;
+    border: none;
 }
