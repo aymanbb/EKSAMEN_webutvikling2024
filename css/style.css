@@ -748,7 +748,6 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
     padding: 2rem;
 
     input {
-        margin: 0 0 0.5rem 0;
         padding: 0.7rem;
         border: 1px solid lightgrey;
     }
@@ -798,19 +797,22 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
     }
 
     label {
-        align-self: center;
-        font-weight: 500;
+        display: flex;
 
-        input {
-            padding: 0.7rem 0.3rem;
+        p {
+            margin: 0 5px 0 0;
         }
     }
 }
 
+.quantity {
+    padding: 0.7rem 0.3rem;
+}
+
 .cart-size-menu {
     background-color: rgb(231, 231, 231);
-    margin: 0 10px 0 3px;
-    padding: 0.7rem 0.5rem;
+    margin: 0 10px 0 5px;
+    padding: 0.5rem 0.8rem;
     border: none;
 }
 
@@ -818,6 +820,7 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
     display: flex;
     flex-direction: column;
     margin-top: 2.5rem;
+    gap: 0.5rem;
 
     #save-btn {
         background-color: rgb(70, 70, 70);
@@ -863,6 +866,7 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
     display: flex;
     flex-direction: column;
     margin-top: 2.5rem;
+    gap: 0.5rem;
 
     p {
         font-weight: 400;
