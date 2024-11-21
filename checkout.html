@@ -38,7 +38,7 @@
         <main>
             <a href="index.html" id="keep-shopping-link">Fortsett å handle</a>
             <h1 id="cart-header">Kasse</h1>
-            <section id="shopping-cart">
+            <section class="checkout-container">
                 <h2>1. SHOPPINGBAGEN DIN</h2>
                 <article class="checkout-product">
                     <img src="https://picsum.photos/200/200" alt="">
@@ -107,9 +107,9 @@
                     <i class="fa-solid fa-trash"></i>
                 </article>
             </section>
-            <section id="customer-data">
+            <section class="checkout-container">
                 <h2>2. DINE OPPLYSNINGER</h2>
-                <form id="cdata-form">
+                <form id="customer-data-form">
                     <p>Leveringsadresse</p>
                     <label for="fname">Fornavn</label>
                     <input type="text" placeholder="Nora*" id="fname">
@@ -121,68 +121,76 @@
                     <input type="number" placeholder="1752*" id="postcode" min="1" max="9999">
                     <label for="postarea">Poststed</label>
                     <input type="text" placeholder="Halden*" id="postarea">
-                    <input type="submit" value="Lagre">
-                    <input type="submit" value="Avbryt">
+                    <p>Kontaktinformasjon</p>
+                    <label for="email">E-post</label>
+                    <input type="email" placeholder="aymanb@hiof.no" id="email">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" placeholder="+4749***018" id="phone">
+                    <input type="submit" value="Lagre" id="save-btn">
+                    <a href="#">Avbryt</a>
                 </form>
             </section>
-            <section id="delivery">
+            <section class="checkout-container">
                 <h2>3. LEVERING</h2>
                 <form id="delivery-form">
                     <h4>LEVERINGSVALG</h4>
                     <label>
                         <input type="radio" id="express-home" name="choice">
-                        <span class="del-type">Express Hjemlevering</span>
-                        <span class="del-days">3-4 Virkedager</span>
-                        <span class="del-info">
+                        <span class="delivery-type">Express Hjemlevering</span>     
+                        <p class="delivery-days">3-4 Virkedager</p>
+                        <p>59 kr<i class="fa-solid fa-truck-fast" aria-hidden="true"></i></p>
+                        <span class="delivery-info">
                             Bestill hverdag før 08:00* for levering neste arbeidsdag.
                             Leveres hjem til deg før frokost mandag til lørdag.
-                        </span>
-                        <span class="del-price">59 kr <i class="fa-solid fa-truck-fast" aria-hidden="true"></i></span>
+                        </span>         
                     </label>
                     <label>
                         <input type="radio" id="express-pickup" name="choice">
-                        <span class="del-type">Ekspress Pakke til utleveringssted</span>
-                        <span class="del-days">1-3 Virkedager</span>
-                        <span class="del-price">59 kr <i class="fa-brands fa-dhl" aria-hidden="true"></i></span>
+                        <span class="delivery-type">Ekspress Pakke til utleveringssted</span>
+                        <p class="delivery-days">1-3 Virkedager</p>
+                        <p>59 kr <i class="fa-brands fa-dhl" aria-hidden="true"></i></p>
                     </label>
                     <label>
                         <input type="radio" id="standard" name="choice">
-                        <span class="del-type">Standard Hjemlevering</span>
-                        <span class="del-days">5-8 Virkedager</span>
-                        <span class="del-info">
+                        <span class="delivery-type">Standard Hjemlevering</span>
+                        <p class="delivery-days">5-8 Virkedager</p>
+                        <p>Gratis <i class="fa-solid fa-box" aria-hidden="true"></i></p>
+                        <span class="delivery-info">
                             Leveres hjem til deg før frokost mandag til lørdag
                             innen 4-7 hverdager.
                         </span>
-                        <span class="del-price">Gratis <i class="fa-solid fa-box" aria-hidden="true"></i></span>
                     </label>
                 </form>
             </section>
-            <section id="payment">
+            <section class="checkout-container">
                 <h2>4. BETALING</h2>
-                <h4>BETAL MED KORT</h4>
-                <i class="fa-solid fa-credit-card"></i>
                 <form id="payment-form">
+                    <h4>BETAL MED KORT<i class="fa-solid fa-credit-card"></i></h4>
                     <label for="card-number">Kortnummer</label>
                     <input type="text" placeholder="342342****4435" id="card-number">
                     <label for="card-date">Utløpsdato</label>
                     <input type="text" placeholder="mm / dd / yyyy" id="card-date">
                     <label for="card-cvc">CVC/CVV</label>
                     <input type="text" placeholder="CVC/CVV" id="card-cvc">
-                    <input type="submit" value="Fullfør kjøp">
                     <p>Å betale inkl. mva.</p>
-                    <h4>1 199 kr</h4>
+                    <h3>1 199 kr</h3>
+                    <input type="submit" id="purchase-btn" value="Fullfør kjøp">
                 </form>
-                <p>
+                <span>
                     Du bekrefter herved at opplysningene og dokumentene du har oppgitt er
                     korrekte og fullstendige. Leverandøren forbeholder seg retten til å
                     heve eller avslutte avtaleforholdet dersom det foreligger uriktige
                     eller ufullstendige opplysninger.
-                </p>
+                </span>
                 <form id="spam-form">
-                    <input type="radio" id="newsletter" name="newsletter">
-                    <label for="newsletter">Ja takk! Send nyhetsbrev til meg.</label>
-                    <input type="radio" id="messages" name="messages">
-                    <label for="messages">Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.</label>
+                    <label>
+                        <input type="radio" id="newsletter" name="newsletter">
+                        <span>Ja takk! Send nyhetsbrev til meg.</span>
+                    </label>
+                    <label>
+                        <input type="radio" id="messages" name="messages">
+                        <span>Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.</span>
+                    </label>
                 </form>
             </section>
         </main>
