@@ -389,8 +389,21 @@ footer {
 
     article {
         position: relative;
-        margin: 0 0 15px 0;
+        margin-bottom: 1.5rem;
 
+        picture {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+            }
+        }
     }
 
     h2 {
@@ -402,27 +415,13 @@ footer {
         text-align: center;
         z-index: 2;
     }
-}    
-
-.pop-categories article picture {
-    position: relative;
-    display: inline-block;
-    border-radius: 25px;
-    overflow: hidden;
-    width: 100%;
-
-    img {   /* Special thanks to: https://jsfiddle.net/Will_law/Lo0n9g2y/ */
-        margin: -5px;
-        filter: blur(4px);
-        width: 100%;
-    }
 }
 
 #reviews {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 10%;
+    padding-top: 1.5rem;
     width: 100%;
 
     h2 {
@@ -443,6 +442,7 @@ footer {
         border-radius: 25px;
         padding: 1rem;
         flex: 0 0 250px; /* Width of each article for proper text wrapping */
+        max-width: 289px;
 
         ul {
             padding: 0;
