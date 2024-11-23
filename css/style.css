@@ -1019,7 +1019,11 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(5, 1fr);
 
-
+        article {
+            margin: 0;
+            padding: 0.3rem;
+            width: 100%;
+        }
     }
 
     #cat-1 {
@@ -1045,7 +1049,20 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
     #cat-5 {
         grid-column: 3/3;
         grid-row: 4/6;
+        height: 300px;
     }
+
+    #cat-1, #cat-2, #cat-3, #cat-5 {
+        max-width: 400px;
+    }
+
+    #cat-4 {
+        max-width: 864px;
+    }
+
+    /*#cat-5 {
+        max-width: 300px;
+    }*/
 }
 /*
     #products-container {
