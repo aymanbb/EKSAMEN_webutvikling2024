@@ -905,14 +905,23 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
     align-items: center;
 }
 
+/* MOBIL I LANDSKAPSMODUS 
+
+@media (orientation: landscape) { interferes with desktop
+
+    #forside-banner {
+        width: 60%;
+    }
+} */
+
 /* DESKTOP */
-@media only screen and (min-width:680px) {
+@media only screen and (min-width:1025px) {
 
     main {
         max-width: 80%;
     }
 
-    header {
+    #site-header {
         flex-direction: row;
         justify-content: space-between;
         justify-self: center;
@@ -967,15 +976,27 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
         }
     }
 
-    /*#pop-products {
+    #pop-products {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
+        justify-content: space-between;
         width: 100%;
-        
-    }*/
 
+        #pop-header {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        picture {
+            max-width: 385px;
+
+            img {
+                height: 385px;
+            }
+        }
+    }
+}
+/*
     #products-container {
         display: flex;
         flex-direction: row;
@@ -988,7 +1009,7 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
     .product-card {
         max-width: 350px;
         /*flex: 1 1 auto;*/
-        align-items: center;
+      /*  align-items: center;
 
         picture {
             max-width: 350px;
@@ -997,5 +1018,4 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
                 height: 350px;
             }
         }
-    }
-}
+    }*/
