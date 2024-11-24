@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling on the body, ty gpt.uio */
+}
+
 main {
     max-width: 95%;
 }
@@ -188,9 +192,6 @@ footer {
 #banner-1 {
     background-image: url(../images/snow-trees.jpg); /* Image by <a href="https://pixabay.com/users/moniquayle-3235038/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1768544">moni quayle</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1768544">Pixabay</a> */
     background-size: cover;
-    border-radius: 25px;
-    padding: 3rem;
-    margin: 0;
 }
 
 #banner-1 figcaption {
@@ -214,6 +215,16 @@ footer {
             font-weight: 500;
             margin-top: 0.5rem;
         }
+}
+
+.banner-content {
+    border-radius: 25px;
+    padding: 3rem;
+    margin: 0;
+}
+
+#banner-2, #banner-3 {
+    display: none;
 }
 
 .btn {
@@ -955,10 +966,31 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
 
     #forside-banner {
         height: 450px;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 1rem;
+       /* scroll-snap-type: x mandatory;  Smooth horizontal scroll */
+       /* scroll-snap-stop: always;*/
 
         h1 {
             margin-top: 5rem;
         }
+    }
+
+    #banner-2, #banner-3 {
+        display: block;
+    }
+    
+    .banner-content {
+        flex: 0 0 auto; /* Ensure each banner retains its size and doesn't shrink */
+        width: 100%;
+        background-size: cover; /* Ensure background image covers the element */
+        /*background-position: center; usikker, tror jeg liker topp delen av bildet best*/
+        background-image: url(../images/snow-trees.jpg);
+        background-size: cover;
+        padding: 3rem;
+        margin: 0;
     }
 
     #pop-btn {
