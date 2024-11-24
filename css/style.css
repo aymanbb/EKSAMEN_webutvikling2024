@@ -962,6 +962,11 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
     #customer-nav {
         margin: 0;
         display: flex;
+
+        a i:hover {
+            transform: scale(1.3);
+            transition: transform 0.2s ease-in-out; /* Add a smooth transition */
+        }
     }
 
     #forside-banner {
