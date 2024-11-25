@@ -576,6 +576,7 @@ footer {
     margin: 0;
     padding: 0;
     font-weight: 500;
+    gap: 0.3rem;
 
     li a{
         text-decoration: none;
@@ -608,19 +609,18 @@ footer {
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
     width: 100%;
-    margin: 0 0 20px;
+    margin: 0 0 1rem 0;
+    
 }
 
 #big-pic {
     grid-column: 2/2;
     grid-row: 1/4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 100%;
 
     img { /* id is #big-pic*/
         width: 100%;
+        height: 100%;
     }
 }
 
@@ -637,32 +637,26 @@ footer {
     }
 }
 
-.product-info {
-
-    /*h3 {
-        font-size: 1.4rem;
-        font-weight: 800;
-    }*/
-
+#product-info {
     a {
         color: grey;
         font-weight: 400;
-        margin-bottom: 20px;
     }
 
-    p {
-        margin-top: 0; 
+    h2 {
+        margin-bottom: 0.5rem;
     }
 }
 
-.size-menu {
+#size-menu {
     width: 100%;
     background-color: rgb(227, 227, 227);
     padding: 0.7rem;
     border-radius: 4px;
+    margin-top: 2rem;
 }
 
-.product-actions {
+#product-actions {
     display: flex;
     flex-direction: row;
     /*align-items: center;*/
@@ -923,7 +917,7 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
 @media only screen and (min-width:1025px) {
 
     main {
-        max-width: 80%;
+        max-width: 75%;
     }
 
     #site-header {
@@ -931,7 +925,7 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
         justify-content: space-between;
         justify-self: center;
         margin: 1rem 0 3rem 0;
-        max-width: 80%;
+        max-width: 75%;
     }
 
     /*#search {
@@ -1027,30 +1021,10 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
         }
 
         picture {
-            max-width: 385px;
+            max-width: 360px;
 
             img {
-                height: 385px;
-            }
-        }
-    }
-
-    #pop-products {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-
-        #pop-prod-header {
-            flex-direction: column;
-            margin-bottom: 0;
-        }
-
-        picture {
-            max-width: 385px;
-
-            img {
-                height: 385px;
+                height: 360px;
             }
         }
     }
@@ -1101,40 +1075,35 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
             flex: unset;
         }
     }
-}
-/* Trenger kanskje ikke, funker det samme uten 
-    #cat-1, #cat-2, #cat-3, #cat-5 {
-        max-width: 400px;
-    }
 
-    #cat-4 {
-        max-width: 864px;
-    }
-
-    #cat-5 {
-        max-width: 300px;
-    }
-}*/
-/*
-    #products-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        gap: 0.5rem;
-    }
-
-    .product-card {
-        max-width: 350px;
-        /*flex: 1 1 auto;*/
-      /*  align-items: center;
-
-        picture {
-            max-width: 350px;
-
-            img {
-                height: 350px;
-            }
+    #product-menu {
+        article {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            grid-template-rows: 1fr;
+            /*max-height: 600px;*/
         }
-    }*/
+    }
+
+    #product-info-container {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        padding: 1rem 0 0 1rem;
+    }
+
+    #product-pics {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        grid-template-columns: 1fr 2.4fr;
+
+    }
+
+    #big-pic {
+        max-height: 650px;
+    }
+
+    .smol-pics {
+        max-height: 206px;
+        max-width: 206px;
+    }
+}

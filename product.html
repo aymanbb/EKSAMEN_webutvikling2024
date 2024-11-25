@@ -10,63 +10,63 @@
     <title>Min nettbutikk | Produktside</title>
 </head>
 <body>
-    <div id="main-grid">
-        <header id="site-header">
-            <form id="search-bar">
-                <label>
-                    <input type="search" placeholder="søk her" id="search">
-                 </label>
-                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-            <nav id="site-nav">
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="index.html#pop-products">Produkter</a></li>
-                </ul>
-                <a href="index.html"><i class="fa-brands fa-linux"></i></a>
-                <ul>
-                    <li><a href="index.html#pop-categories">Kategorier</a></li>
-                    <li><a href="#footer-contact">Kontakt oss</a>
-                </ul>
-            </nav>
-            <nav id="customer-nav">
-                <a href="#"><i class="fa-regular fa-user"></i></a>
-                <a href="#"><i class="fa-regular fa-heart"></i></a>
-                <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            </nav>
-        </header>
-        <main>
-            <nav aria-label="Breadcrumb" id="breadcrumb">
+    <header id="site-header">
+        <form id="search-bar">
+            <label>
+                <input type="search" placeholder="søk her" id="search">
+                </label>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <nav id="site-nav">
             <ul>
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="#">Kategori</a></li>
-                <li><span aria-current="page">Produktnavn</span></li>
+                <li><a href="index.html#pop-products">Produkter</a></li>
             </ul>
-            </nav>
-            <section id="product-menu">
-                <h2 class="visually-hidden">Produktnavn</h2>
-                <article>
-                    <figure id="product-pics"> <!-- figure & div behave differently w/ width, compare -->
-                        <picture id="big-pic">       <!-- TODO: add media -->
-                            <img id="main-pic" src="https://picsum.photos/400/850" alt="">
-                        </picture>
-                        <picture class="smol-pics" id="smol-pic-1">     <!-- TODO: add media, and make sure this is semantic-->
-                            <img src="https://picsum.photos/250/250" alt="">
-                        </picture>
-                        <picture class="smol-pics" id="smol-pic-2">
-                            <img src="https://picsum.photos/250/250" alt="">
-                        </picture>
-                        <picture class="smol-pics" id="smol-pic-3">
-                            <img src="https://picsum.photos/250/250" alt="">
-                        </picture>
-                    </figure>
-                    <header class="product-info">
+            <a href="index.html"><i class="fa-brands fa-linux"></i></a>
+            <ul>
+                <li><a href="index.html#pop-categories">Kategorier</a></li>
+                <li><a href="#footer-contact">Kontakt oss</a>
+            </ul>
+        </nav>
+        <nav id="customer-nav">
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+    </header>
+    <main>
+        <nav aria-label="Breadcrumb" id="breadcrumb">
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="#">Kategori</a></li>
+            <li><span aria-current="page">Produktnavn</span></li>
+        </ul>
+        </nav>
+        <section id="product-menu">
+            <h2 class="visually-hidden">Produktnavn</h2>
+            <article>
+                <figure id="product-pics"> <!-- figure & div behave differently w/ width, compare -->
+                    <picture id="big-pic">       <!-- TODO: add media -->
+                        <img id="main-pic" src="https://picsum.photos/400/850" alt="">
+                    </picture>
+                    <picture class="smol-pics" id="smol-pic-1">     <!-- TODO: add media, and make sure this is semantic-->
+                        <img src="https://picsum.photos/250/250" alt="">
+                    </picture>
+                    <picture class="smol-pics" id="smol-pic-2">
+                        <img src="https://picsum.photos/250/250" alt="">
+                    </picture>
+                    <picture class="smol-pics" id="smol-pic-3">
+                        <img src="https://picsum.photos/250/250" alt="">
+                    </picture>
+                </figure>
+                <div id="product-info-container">
+                    <header id="product-info">
                         <h2>Produktnavn</h2>
                         <a href="#">MERKENAVN</a>
                         <p>5 195 kr inkl. mva.</p>
                         <p>Farge: <b>beige</b></p>
                     </header>
-                    <select class="size-menu" name="size">
+                    <select id="size-menu" name="size">
                         <option>Velg størrelse</option>
                         <option>XS</option>
                         <option>S</option>
@@ -74,7 +74,7 @@
                         <option>L</option>
                         <option>XL</option>
                     </select>
-                    <div class="product-actions">
+                    <div id="product-actions">
                         <form>
                             <label for="add-cart"></label>
                             <input type="submit" value="Legg i handlekurv" id="add-cart">
@@ -224,128 +224,129 @@
                             </tbody>
                         </table>
                     </details>
-                </article>
-            </section>
-        </main>
-        <aside>
-            <h3>Lignende produkter</h3>
-            <div class="scroll-container">
-                <article class="product-card">
-                    <picture>
-                        <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
-                        <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
-                        <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
-                    </picture>
-                    <i class="fa-regular fa-heart"></i>
-                    <header class="product-header">
-                        <h5><a href="product.html">Product name</a></h5>
-                        <p>Kr 1999</p>
-                    </header>
-                    <ul class="product-review">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                        <li><h5>842 Reviews</h5></li>
-                    </ul>
-                </article>
-                <article class="product-card">
-                    <picture>
-                        <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
-                        <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
-                        <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
-                    </picture>
-                    <i class="fa-regular fa-heart"></i>
-                    <header class="product-header">
-                        <h5><a href="product.html">Product name</a></h5>
-                        <p>Kr 1999</p>
-                    </header>
-                    <ul class="product-review">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                        <li><h5>842 Reviews</h5></li>
-                    </ul>
-                </article>
-                <article class="product-card">
-                    <picture>
-                        <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
-                        <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
-                        <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
-                    </picture>
-                    <i class="fa-regular fa-heart"></i>
-                    <header class="product-header">
-                        <h5><a href="product.html">Product name</a></h5>
-                        <p>Kr 1999</p>
-                    </header>
-                    <ul class="product-review">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                        <li><h5>842 Reviews</h5></li>
-                    </ul>
-                </article>
-                <article class="product-card">
-                    <picture>
-                        <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
-                        <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
-                        <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
-                    </picture>
-                    <i class="fa-regular fa-heart"></i>
-                    <header class="product-header">
-                        <h5><a href="product.html">Product name</a></h5>
-                        <p>Kr 1999</p>
-                    </header>
-                    <ul class="product-review">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                        <li><h5>842 Reviews</h5></li>
-                    </ul>
-                </article>
-            </div>
-        </aside>
-        <footer>
-            <section class="footer-logo" id="footer-logo">
-                <i class="fa-brands fa-linux"></i>
-                <h4>Vi er de beste på det vi gjør!</h4>
-            </section>
-            <section id="footer-contact">
-                <h3>KONTAKT</h3>
-                <ul>
-                    <li><i class="fa-solid fa-location-dot"></i><b>Adresse:</b> B R A veien 4, 1757 Halden</li> <!-- Husk å sjekke om du kan gjøre spesifikke deler av tekst bold i CSS istedenfor -->
-                    <li><i class="fa-solid fa-phone"></i><b>Telefon:</b> 69 60 80 00</li>
-                    <li><i class="fa-solid fa-envelope"></i><b>E-post:</b> halden@hiof.no</li>
-                    <li><i class="fa-solid fa-clock"></i><b>Åpningstider:</b> Stenger 15:00</li>
+                </div>
+            </article>
+        </section>
+    </main>
+    <aside>
+        <h3>Lignende produkter</h3>
+        <div class="scroll-container">
+            <article class="product-card">
+                <picture>
+                    <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
+                    <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
+                    <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                </picture>
+                <i class="fa-regular fa-heart"></i>
+                <header class="product-header">
+                    <h5><a href="product.html">Product name</a></h5>
+                    <p>Kr 1999</p>
+                </header>
+                <ul class="product-review">
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><h5>842 Reviews</h5></li>
                 </ul>
-            </section>
-            <section id="footer-shortcuts">
-                <h3>SNARVEIER</h3>
-                <nav>
-                    <ul>
-                        <li><a href="#">Produkter</a></li>
-                        <li><a href="#">Kategorier</a></li>
-                        <li><a href="#">Kontakt oss</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section id="footer-some">
-                <h3>SOSIALE MEDIER</h3>
-                <ul>
-                    <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a></li>
+            </article>
+            <article class="product-card">
+                <picture>
+                    <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
+                    <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
+                    <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                </picture>
+                <i class="fa-regular fa-heart"></i>
+                <header class="product-header">
+                    <h5><a href="product.html">Product name</a></h5>
+                    <p>Kr 1999</p>
+                </header>
+                <ul class="product-review">
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><h5>842 Reviews</h5></li>
                 </ul>
-            </section>
-        </footer>
-    </div>
+            </article>
+            <article class="product-card">
+                <picture>
+                    <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
+                    <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
+                    <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                </picture>
+                <i class="fa-regular fa-heart"></i>
+                <header class="product-header">
+                    <h5><a href="product.html">Product name</a></h5>
+                    <p>Kr 1999</p>
+                </header>
+                <ul class="product-review">
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><h5>842 Reviews</h5></li>
+                </ul>
+            </article>
+            <article class="product-card">
+                <picture>
+                    <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
+                    <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
+                    <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                </picture>
+                <i class="fa-regular fa-heart"></i>
+                <header class="product-header">
+                    <h5><a href="product.html">Product name</a></h5>
+                    <p>Kr 1999</p>
+                </header>
+                <ul class="product-review">
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><h5>842 Reviews</h5></li>
+                </ul>
+            </article>
+        </div>
+    </aside>
+    <footer>
+        <section class="footer-logo" id="footer-logo">
+            <i class="fa-brands fa-linux"></i>
+            <h4>Vi er de beste på det vi gjør!</h4>
+        </section>
+        <section id="footer-contact">
+            <h3>KONTAKT</h3>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i><b>Adresse:</b> B R A veien 4, 1757 Halden</li> <!-- Husk å sjekke om du kan gjøre spesifikke deler av tekst bold i CSS istedenfor -->
+                <li><i class="fa-solid fa-phone"></i><b>Telefon:</b> 69 60 80 00</li>
+                <li><i class="fa-solid fa-envelope"></i><b>E-post:</b> halden@hiof.no</li>
+                <li><i class="fa-solid fa-clock"></i><b>Åpningstider:</b> Stenger 15:00</li>
+            </ul>
+        </section>
+        <section id="footer-shortcuts">
+            <h3>SNARVEIER</h3>
+            <nav>
+                <ul>
+                    <li><a href="#">Produkter</a></li>
+                    <li><a href="#">Kategorier</a></li>
+                    <li><a href="#">Kontakt oss</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="footer-some">
+            <h3>SOSIALE MEDIER</h3>
+            <ul>
+                <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a></li>
+            </ul>
+        </section>
+    </footer>
+
 </body>
 </html>
