@@ -1078,28 +1078,23 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
 
     #product-menu {
         article {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            grid-template-rows: 1fr;
-            /*max-height: 600px;*/
+            display: flex;
+            max-height: 600px;
         }
     }
 
     #product-info-container {
-        grid-column: 2/3;
-        grid-row: 1/2;
         padding: 1rem 0 0 1rem;
+        width: 60%;
     }
 
     #product-pics {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        grid-template-columns: 1fr 2.4fr;
-
+        grid-template-columns: 1fr 2.3fr;
     }
 
     #big-pic {
-        max-height: 650px;
+        /*max-height: 700px;*/
+        max-width: 500px;
     }
 
     .smol-pics {
