@@ -59,12 +59,7 @@ main {
 }
 
 aside {
-    width: 100%;
-    padding: 3rem 0;
-
-    h3 {
-        padding: 1rem 0;
-    }
+    padding: 2rem 0 0 1rem;
 }
 
 footer {
@@ -269,19 +264,18 @@ footer {
     align-items: center; /* Trenger strengt tatt ikke flex, tror jeg */
     position: relative;
 
-    picture {
+    picture { 
         width: 100%;
 
         img {
             border-radius: 25px;
             width: 100%;
-            max-height: 370px;
         }
+    }
 
-        .rec-prod-img { /* Lignende produkter bilde i product.html */
-            min-width: 200px;
-            min-height: 200px;
-        }
+    .rec-prod-img { /* Lignende produkter bilde i product.html */
+        min-width: 200px;
+        min-height: 200px;
     }
 
     p {
@@ -356,8 +350,8 @@ footer {
         padding: 0;
         align-self: flex-start;
 
-        h4 {
-            margin: 0 0 0 0.8rem;
+        h5 {
+            padding-left: 2rem;
         }
 
         li p {
@@ -1081,5 +1075,30 @@ details > summary::-webkit-details-marker {
     .smol-pics {
         max-height: 223px;
         max-width: 223px;
+    }
+
+    .product-card {
+
+        .rec-prod-img {
+            min-width: 250px;
+            min-height: 250px;
+        }
+    }
+
+    #review-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+
+        a {
+            align-self: center;
+            text-decoration: none;
+        }
+
+        a::after {
+            font-size: 1.3rem;
+            margin: 0 0.5rem;
+            content: "→";
+        }
     }
 }
