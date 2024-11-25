@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-html, body {
-    overflow-x: hidden; /* Prevent horizontal scrolling on the body, ty gpt.uio */
-}
-
 main {
     max-width: 95%;
 }
@@ -907,7 +903,7 @@ details > summary::-webkit-details-marker {
         justify-content: space-between;
         justify-self: center;
         margin: 1rem 0 3rem 0;
-        max-width: 75%;
+        max-width: 75vw;
     }
 
     /*#search {
@@ -1073,6 +1069,8 @@ details > summary::-webkit-details-marker {
         grid-template-columns: 1fr 2.3fr;
         max-height: 700px;
         margin: 0;
+        position: sticky;
+        top: 0;
     }
 
     #big-pic {
