@@ -58,8 +58,17 @@ header {
 
 main {
     margin: auto auto 3rem auto;
-    flex: 0 1 auto;
+    /*flex: 0 1 auto;*/
     width: 100%;
+}
+
+aside {
+    width: 100%;
+    padding: 3rem 0;
+
+    h3 {
+        padding: 1rem 0;
+    }
 }
 
 footer {
@@ -368,10 +377,6 @@ footer {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    
-    p {
-        margin-bottom: 2rem;
-    }
 
     h1 {
         display: inline-block;
@@ -381,7 +386,7 @@ footer {
 
     article {
         position: relative;
-        margin-bottom: 1.5rem;
+        padding-top: 1rem;
 
         picture {
             position: relative;
@@ -418,7 +423,7 @@ footer {
 
     h2 {
         font-weight: 750;
-        margin: 1rem 0;
+        margin: 2rem 0;
     }
 }
 
@@ -428,7 +433,7 @@ footer {
     justify-content: space-between;
     overflow-x: auto;
     gap: 1rem;
-    width: calc(100vw - 38px);
+    width: 100%;
     
 
     .review-card {
@@ -704,10 +709,6 @@ details > summary::-webkit-details-marker {
     display: none;
 }
 
-aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
-    margin-bottom: 3rem;
-}
-
 /* SHOPPING CART SITE */
 
 #keep-shopping-link {
@@ -897,7 +898,7 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
 /* DESKTOP */
 @media only screen and (min-width:1025px) {
 
-    main, aside {
+    main {
         max-width: 75%;
     }
 
@@ -1048,7 +1049,7 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
         height: 300px;
     }
 
-    .scroll-container {
+    #scroll-reviews {
         width: 100%;
         overflow-x: unset;
 
@@ -1060,7 +1061,6 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
     #product-menu {
         article {
             display: flex;
-            max-height: 600px;
         }
     }
 
@@ -1071,6 +1071,7 @@ aside { /* scroll container er i linje 395, produkt kort er i linje 237 */
 
     #product-pics {
         grid-template-columns: 1fr 2.3fr;
+        max-height: 600px;
     }
 
     #big-pic {
