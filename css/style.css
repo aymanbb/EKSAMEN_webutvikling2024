@@ -1071,16 +1071,17 @@ details > summary::-webkit-details-marker {
 
     #product-pics {
         grid-template-columns: 1fr 2.3fr;
-        max-height: 600px;
+        max-height: 700px;
+        margin: 0;
     }
 
     #big-pic {
-        /*max-height: 700px;*/
+        max-height: 700px;
         max-width: 500px;
     }
 
     .smol-pics {
-        max-height: 206px;
-        max-width: 206px;
+        max-height: 223px;
+        max-width: 223px;
     }
 }
