@@ -733,11 +733,9 @@ details > summary::-webkit-details-marker {
 }
 
 .checkout-container {
-    /*display: flex;
-    flex-direction: column;*/
-    margin: 1rem 0;
     border: 1px solid lightgrey;
     padding: 2rem;
+    margin: 1rem 0;
 
     input {
         padding: 0.7rem;
@@ -747,32 +745,32 @@ details > summary::-webkit-details-marker {
     h2 {
         font-size: 1.6rem;
         font-weight: 800;
+        padding-top: 1rem;
     }
 }
 
 .checkout-product {
+    margin-top: 2rem;
+    
+    figure {
+        margin: 0;
+    }
 
     img {
-        width: 200px;
-        margin: 2rem 0;
+        /*width: 200px;*/
+        margin-bottom: 2rem;
     }
 
-    h4 {
-        /*display: inline-block;*/
-        margin: 0 0 0 30px;
-        font-weight: 800;
-    }
+    figcaption {padding-left: 30px;}
 
-    p {
-        margin: 0 0 0 30px;
-    }
+    h4 {font-weight: 800;}
 
     i {
         margin: 3.5rem 0 1rem 0;
     }
 
     i.fa-heart {
-        padding: 0 0.5rem 0 2rem;
+        padding: 0 0.5rem 0 30px;
         color: white;
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: black;
@@ -783,6 +781,7 @@ details > summary::-webkit-details-marker {
 .checkout-form {
     display: flex;
     margin-top: 1.3rem;
+    padding-left: 30px;
 
     p {
         align-self: center;
@@ -986,7 +985,7 @@ details > summary::-webkit-details-marker {
     .banner-content {
         flex: 0 0 auto; /* Ensure each banner retains its size and doesn't shrink */
         width: 100%;
-        background-size: cover; /* Ensure background image covers the element */
+        background-size: cover;
         /*background-position: center; usikker, tror jeg liker topp delen av bildet best*/
         background-image: url(../images/snow-trees.jpg);
         background-size: cover;
@@ -1016,6 +1015,32 @@ details > summary::-webkit-details-marker {
             background-color: #000000;
         }
     }
+/*
+    #pop-products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 0.3fr 0.1fr 1fr 1fr;
+        width: 100%;
+
+        picture {
+            max-width: 360px;
+
+            img {
+                height: 360px;
+            }
+        }
+    }
+
+    #pop-prod-header {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+
+    #pop-btn {
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+*/
 
     #pop-products {
         flex-direction: row;
@@ -1120,6 +1145,33 @@ details > summary::-webkit-details-marker {
             flex: unset;
         }
     }
+
+    /* checkout.html */
+
+    .checkout-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {padding-right: 23rem;}
+    }
+
+    .checkout-product {
+        display: flex;
+        
+        figure {
+            display: flex; 
+            position: relative;
+    }
+
+    .checkout-form {
+        position: absolute;
+        padding: 6rem 0 0 14.3rem
+    }
+
+    i {margin: 5px 0 0;}
+
+    i.fa-heart {padding-left: 15rem;}
 }
    /* .product-card {
 
