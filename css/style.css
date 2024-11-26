@@ -756,11 +756,6 @@ details > summary::-webkit-details-marker {
         margin: 0;
     }
 
-    img {
-        /*width: 200px;*/
-        margin-bottom: 2rem;
-    }
-
     figcaption {padding-left: 30px;}
 
     h4 {font-weight: 800;}
@@ -872,10 +867,13 @@ details > summary::-webkit-details-marker {
     margin-top: 2.5rem;
     gap: 0.5rem;
 
+    h4 {gap: 3rem;}
+
     p {
         font-weight: 400;
         font-size: 0.8rem;
     }
+
 
     h3 {
         font-size: 1.5rem;
@@ -886,6 +884,8 @@ details > summary::-webkit-details-marker {
     h3, p {
         align-self: center;
     }
+
+    i {padding-left: 0.5rem;}
 
     #purchase-btn {
         background-color: rgb(70, 70, 70);
@@ -1173,12 +1173,15 @@ details > summary::-webkit-details-marker {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 2.5rem 15rem;
 
-        h2 {padding-right: 23rem;}
+
+        h2 {align-self: flex-start;}
     }
 
     .checkout-product {
         display: flex;
+        
         
         figure {
             display: flex; 
@@ -1198,7 +1201,7 @@ details > summary::-webkit-details-marker {
     #customer-data-form {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 65%;
+        width: 100%;
         gap: 0;
         column-gap: 0.5rem;
         row-gap: 1rem;
@@ -1268,18 +1271,22 @@ details > summary::-webkit-details-marker {
     }
 
     #delivery-form {
-        width: 65%;
+        
 
         label {
             position: relative;
-            
-            .delivery-price {
-                position: absolute;
-                top: 5px;
-                right: 15px;
-
-                i {padding: 0 0.5rem;}
-            }
         }
+    }
+
+    .delivery-price {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+
+        i {padding: 0 0.5rem;}
+    }
+
+    #payment-form {
+        width: 100%;
     }
 }
