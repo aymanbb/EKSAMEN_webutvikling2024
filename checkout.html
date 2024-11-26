@@ -57,8 +57,8 @@
                         <option>L</option>
                         <option>XL</option>
                     </select>
-                    <label for="qty-input">Antall</label>
-                    <input type="number" id="qty-input" class="quantity" placeholder="1" min="1" max="10">
+                    <label for="qty-input-1">Antall</label>
+                    <input type="number" id="qty-input-1" class="quantity" placeholder="1" min="1" max="10">
                 </form>
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-trash"></i>
@@ -81,8 +81,8 @@
                         <option>L</option>
                         <option>XL</option>
                     </select>
-                    <label for="qty-input">Antall</label>
-                    <input type="number" id="qty-input" class="quantity" placeholder="1" min="1" max="10">
+                    <label for="qty-input-2">Antall</label>
+                    <input type="number" id="qty-input-2" class="quantity" placeholder="1" min="1" max="10">
                 </form>
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-trash"></i>
@@ -105,8 +105,8 @@
                         <option>L</option>
                         <option>XL</option>
                     </select>
-                    <label for="qty-input">Antall</label>
-                    <input type="number" id="qty-input" class="quantity" placeholder="1" min="1" max="10">
+                    <label for="qty-input-3">Antall</label>
+                    <input type="number" id="qty-input-3" class="quantity" placeholder="1" min="1" max="10">
                 </form>
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-trash"></i>
@@ -185,12 +185,18 @@
             <h2>4. BETALING</h2>
             <form id="payment-form">
                 <h4>BETAL MED KORT<i class="fa-solid fa-credit-card"></i></h4>
-                <label for="card-number">Kortnummer</label>
+                <label id="card-num-label">
+                Kortnummer
                 <input type="text" placeholder="342342****4435" id="card-number">
-                <label for="card-date">Utløpsdato</label>
+                </label>
+                <label>
+                Utløpsdato
                 <input type="text" placeholder="mm / dd / yyyy" id="card-date">
-                <label for="card-cvc">CVC/CVV</label>
+                </label>
+                <label>
+                CVC/CVV
                 <input type="text" placeholder="CVC/CVV" id="card-cvc">
+                </label>
                 <p>Å betale inkl. mva.</p>
                 <h3>1 199 kr</h3>
                 <input type="submit" id="purchase-btn" value="Fullfør kjøp">
