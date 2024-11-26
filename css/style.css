@@ -1138,7 +1138,11 @@ details > summary::-webkit-details-marker {
         padding-bottom: 2rem;
     }
 
-    aside { padding: 2rem 0 0 0; }
+    aside {
+        width: 100%;
+        justify-self: center;
+        padding-top: 3rem;
+    }
 
     #scroll-reviews {
         width: 100%;
