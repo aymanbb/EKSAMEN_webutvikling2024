@@ -57,10 +57,8 @@
                         <option>L</option>
                         <option>XL</option>
                     </select>
-                    <label>
-                        Antall
-                        <input type="number" class="quantity" placeholder="1" min="1" max="10">
-                    </label>
+                    <label for="qty-input">Antall</label>
+                    <input type="number" id="qty-input" class="quantity" placeholder="1" min="1" max="10">
                 </form>
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-trash"></i>
@@ -83,10 +81,8 @@
                         <option>L</option>
                         <option>XL</option>
                     </select>
-                    <label>
-                        Antall
-                        <input type="number" class="quantity" placeholder="1" min="1" max="10">
-                    </label>
+                    <label for="qty-input">Antall</label>
+                    <input type="number" id="qty-input" class="quantity" placeholder="1" min="1" max="10">
                 </form>
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-trash"></i>
@@ -109,10 +105,8 @@
                         <option>L</option>
                         <option>XL</option>
                     </select>
-                    <label>
-                        Antall
-                        <input type="number" class="quantity" placeholder="1" min="1" max="10">
-                    </label>
+                    <label for="qty-input">Antall</label>
+                    <input type="number" id="qty-input" class="quantity" placeholder="1" min="1" max="10">
                 </form>
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-trash"></i>
@@ -143,11 +137,11 @@
                     <input type="text" placeholder="Halden*" id="postarea">
                 </label>
                 <p id="p-contactinfo">Kontaktinformasjon</p>
-                <label>
+                <label id="email-label">
                     E-post
                     <input type="email" placeholder="aymanb@hiof.no" id="email">
                 </label>
-                <label>
+                <label id="phone-label">
                     Telefon
                     <input type="tel" placeholder="+4749***018" id="phone">
                 </label>
@@ -162,8 +156,8 @@
                 <label>
                     <input type="radio" id="express-home" name="choice">
                     <span class="delivery-type">Express Hjemlevering</span>     
-                    3-4 Virkedager
-                    59 kr<i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+                    <span class="delivery-time">3-4 Virkedager</span>
+                    <span class="delivery-price">59 kr<i class="fa-solid fa-truck-fast" aria-hidden="true"></i></span>
                     <span class="delivery-info">
                         Bestill hverdag før 08:00* for levering neste arbeidsdag.
                         Leveres hjem til deg før frokost mandag til lørdag.
@@ -172,14 +166,14 @@
                 <label>
                     <input type="radio" id="express-pickup" name="choice">
                     <span class="delivery-type">Ekspress Pakke til utleveringssted</span>
-                    1-3 Virkedager
-                    59 kr <i class="fa-brands fa-dhl" aria-hidden="true"></i>
+                    <span class="delivery-time">1-3 Virkedager</span>
+                    <span class="delivery-price">59 kr <i class="fa-brands fa-dhl" aria-hidden="true"></i></span>
                 </label>
                 <label>
                     <input type="radio" id="standard" name="choice">
                     <span class="delivery-type">Standard Hjemlevering</span>
-                    5-8 Virkedager
-                    Gratis <i class="fa-solid fa-box" aria-hidden="true"></i>
+                    <span class="delivery-time">5-8 Virkedager</span>
+                    <span class="delivery-price">Gratis<i class="fa-solid fa-box" aria-hidden="true"></i></span>
                     <span class="delivery-info">
                         Leveres hjem til deg før frokost mandag til lørdag
                         innen 4-7 hverdager.
