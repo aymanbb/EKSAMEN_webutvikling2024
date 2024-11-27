@@ -1023,7 +1023,7 @@ details > summary::-webkit-details-marker {
 
     #banner-3 {
         display: unset;
-        background: url(https://picsum.photos/id/56/1100/350);
+        background: url(https://picsum.photos/id/84/1100/350);
         background-size: cover;
     }
 
@@ -1048,6 +1048,13 @@ details > summary::-webkit-details-marker {
                 font-weight: 500;
                 margin-top: 0.5rem;
             }
+    }
+
+    #banner-3 figcaption {
+
+        h1, p {
+            color: white;
+        }
     }
     
     .banner-content {
