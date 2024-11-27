@@ -1010,17 +1010,50 @@ details > summary::-webkit-details-marker {
         }
     }
 
-    #banner-2, #banner-3 {
-        display: block;
+    #banner-1 {
+        background: url(https://picsum.photos/id/18/1100/350);
+        background-size: cover;
+    }
+
+    #banner-2 {
+        display: unset;
+        background: url(https://picsum.photos/id/42/1100/350);
+        background-size: cover;
+    }
+
+    #banner-3 {
+        display: unset;
+        background: url(https://picsum.photos/id/56/1100/350);
+        background-size: cover;
+    }
+
+    #banner-2 figcaption, #banner-3 figcaption {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+    
+        h1 {
+            line-height: 2rem;
+            width: 42%;
+            font-weight: 750;
+            }
+        
+            p {
+                width: 37%;
+            }
+        
+            a {
+                text-decoration: none;
+                font-weight: 500;
+                margin-top: 0.5rem;
+            }
     }
     
     .banner-content {
         flex: 0 0 auto; /* Ensure each banner retains its size and doesn't shrink */
         width: 100%;
-        background-size: cover;
         /*background-position: center; usikker, tror jeg liker topp delen av bildet best*/
-        background-image: url(../images/snow-trees.jpg);
-        background-size: cover;
         padding: 3rem;
         margin: 0;
     }
