@@ -929,8 +929,32 @@ details > summary::-webkit-details-marker {
     }
 } */
 
+/* TABLET */
+
+@media only screen and (min-width: 600px) {
+
+    #pop-products {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        picture {
+            /*max-width: 360px;*/
+
+            img {
+                height: 250px;
+            }
+        }
+
+        .product-card {
+            flex: 1 1 250px;
+        }
+    }    
+}
+
 /* DESKTOP */
-@media only screen and (min-width:1025px) {
+@media only screen and (min-width:1024px) {
 
     main, #site-header, footer{
         max-width: 1200px;
@@ -1124,12 +1148,12 @@ details > summary::-webkit-details-marker {
             /*max-width: 360px;*/
 
             img {
-                height: 360px;
+                height: 320px;
             }
         }
 
         .product-card {
-            flex: 1 1 360px;
+            flex: 1 1 320px;
         }
     }
 
