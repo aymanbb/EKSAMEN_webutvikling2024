@@ -386,6 +386,8 @@ aside {
     }
 }
 
+#cat-grid {margin-top: 1rem}
+
 #reviews {
     display: flex;
     flex-direction: column;
@@ -1161,6 +1163,8 @@ details > summary::-webkit-details-marker {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(5, 1fr);
+        max-height: 800px;
+        gap: 0.5rem;
 
         article {
             margin: 0;
@@ -1192,7 +1196,6 @@ details > summary::-webkit-details-marker {
     #cat-5 {
         grid-column: 3/3;
         grid-row: 4/6;
-        height: 300px;
     }
 
     #product-menu {
