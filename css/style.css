@@ -932,89 +932,6 @@ details > summary::-webkit-details-marker {
 
 @media only screen and (min-width: 600px) {
 
-    #forside-banner {
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        gap: 1rem;
-       /* scroll-snap-type: x mandatory;  Smooth horizontal scroll */
-       /* scroll-snap-stop: always;*/
-
-        h1 {
-            margin-top: 5rem;
-            width: 30%;
-        }
-    }
-
-    #banner-2 {
-        display: unset;
-        background: url(https://picsum.photos/id/42/1100/350);
-        background-size: cover;
-    }
-
-    #banner-3 {
-        display: unset;
-        background: url(https://picsum.photos/id/84/1100/350);
-        background-size: cover;
-    }
-
-    #banner-2 figcaption, #banner-3 figcaption {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: start;
-    
-        h1 {
-            line-height: 2rem;
-            width: 30%;
-            font-weight: 750;
-            margin-top: 5rem;
-            }
-        
-        p {
-            width: 50%;
-        }
-    
-        a {
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 0.5rem;
-        }
-    }
-
-    #banner-3 figcaption {
-
-        h1, p {
-            color: white;
-        }
-    }
-    
-    .banner-content {
-        flex: 0 0 auto;
-        width: 100%;
-        padding: 3rem;
-        margin: 0;
-        position: relative;
-
-        i.fa-arrow-left {
-            position: absolute;
-            left: 10px;
-        }
-
-        i.fa-arrow-right {
-            position: absolute;
-            right: 10px;
-        }
-        
-        i.fa-arrow-left, i.fa-arrow-right {
-            border-radius: 50px;
-            padding: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            background: lightgrey;
-        }
-    }
-
     #pop-products {
         flex-direction: row;
         flex-wrap: wrap;
@@ -1089,9 +1006,6 @@ details > summary::-webkit-details-marker {
         margin: 1rem 0 3rem 0;
     }
 
-    /*#search {
-    }*/
-
     #site-nav {
         display: flex;
         width: 100%;
@@ -1110,7 +1024,7 @@ details > summary::-webkit-details-marker {
 
         a i:hover {
             transform: scale(1.3);
-            transition: transform 0.2s ease-in-out; /* Add a smooth transition */
+            transition: transform 0.2s ease-in-out;
         }
     }
 
@@ -1148,8 +1062,6 @@ details > summary::-webkit-details-marker {
         flex-direction: row;
         overflow-x: auto;
         gap: 1rem;
-       /* scroll-snap-type: x mandatory;  Smooth horizontal scroll */
-       /* scroll-snap-stop: always;*/
     }
 
     #banner-1 {
@@ -1252,32 +1164,6 @@ details > summary::-webkit-details-marker {
             background-color: #000000;
         }
     }
-/*
-    #pop-products {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 0.3fr 0.1fr 1fr 1fr;
-        width: 100%;
-
-        picture {
-            max-width: 360px;
-
-            img {
-                height: 360px;
-            }
-        }
-    }
-
-    #pop-prod-header {
-        grid-column: 1/4;
-        grid-row: 1/2;
-    }
-
-    #pop-btn {
-        grid-column: 1/4;
-        grid-row: 2/3;
-    }
-*/
 
     #pop-products {
         flex-direction: row;
