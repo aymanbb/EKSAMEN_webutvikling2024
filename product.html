@@ -45,18 +45,26 @@
         <section id="product-menu">
             <h2 class="visually-hidden">Produktnavn</h2>
             <article>
-                <figure id="product-pics"> <!-- figure & div behave differently w/ width, compare -->
-                    <picture id="big-pic">       <!-- TODO: add media -->
-                        <img id="main-pic" src="https://picsum.photos/400/850" alt="">
+                <figure id="product-pics">
+                    <picture id="big-pic">
+                        <source media="(min-width:1024px)" srcset="images/outfit_476x700.jpg">
+                        <source media="(min-width:500px)" srcset="images/outfit_340x720.jpg"> <!-- 500px istedenfor 600px med vilje, synes det gir bedre overgang med resolusjon -->
+                        <img id="main-pic" src="images/outfit_220x450.jpg" alt="">
                     </picture>
-                    <picture class="smol-pics" id="smol-pic-1">     <!-- TODO: add media, and make sure this is semantic-->
-                        <img src="https://picsum.photos/250/250" alt="">
+                    <picture class="smol-pics" id="smol-pic-1">
+                        <source media="(min-width:1024px)" srcset="images/outfit_207x223.jpg">
+                        <source media="(min-width:500px)" srcset="images/outfit_240x240.jpg">
+                        <img src="images/outfit_150x150.jpg" alt="">
                     </picture>
                     <picture class="smol-pics" id="smol-pic-2">
-                        <img src="https://picsum.photos/250/250" alt="">
+                        <source media="(min-width:1024px)" srcset="images/outfit_207x223.jpg">
+                        <source media="(min-width:500px)" srcset="images/outfit_240x240.jpg">
+                        <img src="images/outfit_150x150.jpg" alt="">
                     </picture>
                     <picture class="smol-pics" id="smol-pic-3">
-                        <img src="https://picsum.photos/250/250" alt="">
+                        <source media="(min-width:1024px)" srcset="images/outfit_207x223.jpg">
+                        <source media="(min-width:500px)" srcset="images/outfit_240x240.jpg">
+                        <img src="images/outfit_150x150.jpg" alt="">
                     </picture>
                 </figure>
                 <div id="product-info-container">
@@ -262,9 +270,7 @@
                 <div class="scroll-container" id="scroll-related">
                     <article class="product-card">
                         <picture>
-                            <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
-                            <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
-                            <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -282,9 +288,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
-                            <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
-                            <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -302,9 +306,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
-                            <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
-                            <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -322,9 +324,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
-                            <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
-                            <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -342,9 +342,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
-                            <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
-                            <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -362,9 +360,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <source media="(min-width:900px)" srcset="https://picsum.photos/900/200">
-                            <source media="(min-width:500px)" srcset="https://picsum.photos/490/400">
-                            <img class="rec-prod-img" src="https://picsum.photos/400/400" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -386,6 +382,7 @@
     </main>
     <footer>
         <section class="footer-logo" id="footer-logo">
+            <h2 class="visually-hidden">Footer logo</h2>
             <i class="fa-brands fa-linux"></i>
             <p>Vi er de beste på det vi gjør!</p>
         </section>
@@ -403,7 +400,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html/#pop-products">Produkter</a></li>
-                    <li><a href="#index.html/#pop-categories">Kategorier</a></li>
+                    <li><a href="index.html/#pop-categories">Kategorier</a></li>
                     <li><a href="#footer-contact">Kontakt oss</a></li>
                 </ul>
             </nav>
