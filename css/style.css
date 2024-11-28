@@ -765,7 +765,10 @@ details > summary::-webkit-details-marker {
 
     figcaption {margin-left: 30px;}
 
-    h4 {font-weight: 800;}
+    h4 {
+        font-weight: 800;
+        margin-top: 3rem;
+    }
 
     label {
         align-self: center;
@@ -782,7 +785,10 @@ details > summary::-webkit-details-marker {
         list-style: none;
         display: flex;
         gap: 1rem;
+        margin-top: 2rem;
     }
+
+    p {font-weight: 400;}
 
 }
 
@@ -805,13 +811,15 @@ details > summary::-webkit-details-marker {
     }
 }
 
-.quantity {
-    padding: 0.7rem 0.3rem;
+#qty-input-1,
+#qty-input-2,
+#qty-input-3 {
+    padding: 0.5rem 0.8rem;
 }
 
 .cart-size-menu {
     background-color: rgb(231, 231, 231);
-    margin: 0 10px 0 5px;
+    margin-right: 5px;
     padding: 0.5rem 0.8rem;
     border: none;
 }
@@ -1298,18 +1306,17 @@ details > summary::-webkit-details-marker {
         display: flex;
         width: 100%;
         position: relative;
+        justify-content: space-between;
 
         figure {display: flex;}
-
-        figcaption {min-width: 147px;}
-
+        
         ul {
             flex-direction: column;
-            margin: 0 0 0 20rem;
+            margin: 0;
             padding: 0;
-            width: 0;
-
         }
+
+        h4 {margin: 0;}
     }
 
     .checkout-form {
