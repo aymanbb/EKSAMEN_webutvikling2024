@@ -168,35 +168,35 @@ aside {
     background-size: cover;
 }
 
-#banner-1 figcaption {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: end;
-    
-    h1 {
-        line-height: 2rem;
-        width: 42%;
-        font-weight: 750;
-        }
-    
-    p {
-        width: 50%;
-    }
-
-    a {
-        text-decoration: none;
-        font-weight: 500;
-        margin-top: 0.5rem;
-    }
-}
-
 .banner-content {
     border-radius: 25px;
     padding: 3rem;
     margin: 0;
 
     i.fa-arrow-left, i.fa-arrow-right {display: none;}
+
+    figcaption {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: end;
+        
+        h1 {
+            line-height: 2rem;
+            width: 42%;
+            font-weight: 750;
+            }
+        
+        p {
+            width: 50%;
+        }
+    
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+    }
 }
 
 #banner-2, #banner-3 {
@@ -947,8 +947,6 @@ details > summary::-webkit-details-marker {
         width: 100%;
 
         picture {
-            /*max-width: 360px;*/
-
             img {
                 height: 250px;
             }
@@ -1072,14 +1070,55 @@ details > summary::-webkit-details-marker {
         gap: 1rem;
     }
 
+    .banner-content {
+        flex: 0 0 auto;
+        width: 100%;
+        position: relative;
+        padding: 4rem;
+
+        i.fa-arrow-left {
+            position: absolute;
+            left: 10px;
+        }
+
+        i.fa-arrow-right {
+            position: absolute;
+            right: 10px;
+        }
+        
+        i.fa-arrow-left, i.fa-arrow-right {
+            display: unset;
+            border-radius: 50px;
+            padding: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: lightgrey;
+        }
+    }
+
+    .banner-content figcaption {
+
+        h1 {
+            margin-top: 5rem;
+            line-height: 2rem;
+            width: 30%;
+            font-weight: 750;
+            }
+        
+        p {
+            width: 50%;
+        }
+    
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+    }
+
     #banner-1 {
         background: url(https://picsum.photos/id/18/1100/350);
         background-size: cover;
-
-        figcaption h1{
-            margin-top: 5rem;
-            width: 30%;
-        }
     }
 
     #banner-2 {
@@ -1099,54 +1138,12 @@ details > summary::-webkit-details-marker {
         flex-direction: column;
         align-items: flex-start;
         text-align: start;
-    
-        h1 {
-            line-height: 2rem;
-            width: 30%;
-            font-weight: 750;
-            }
-        
-        p {
-            width: 50%;
-        }
-    
-        a {
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 0.5rem;
-        }
     }
 
     #banner-3 figcaption {
 
         h1, p {
             color: white;
-        }
-    }
-    
-    .banner-content {
-        flex: 0 0 auto;
-        width: 100%;
-        padding: 3rem;
-        margin: 0;
-        position: relative;
-
-        i.fa-arrow-left {
-            position: absolute;
-            left: 10px;
-        }
-
-        i.fa-arrow-right {
-            position: absolute;
-            right: 10px;
-        }
-        
-        i.fa-arrow-left, i.fa-arrow-right {
-            border-radius: 50px;
-            padding: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            background: lightgrey;
         }
     }
 
@@ -1174,14 +1171,8 @@ details > summary::-webkit-details-marker {
     }
 
     #pop-products {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
 
         picture {
-            /*max-width: 360px;*/
-
             img {
                 height: 320px;
             }
