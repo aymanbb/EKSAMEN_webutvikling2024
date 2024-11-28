@@ -1231,6 +1231,10 @@ details > summary::-webkit-details-marker {
         max-width: 223px;
     }
 
+    #size-menu:hover {
+        border: 2px solid black;
+    }
+
     #review-header { 
         flex-direction: row;
         justify-content: space-between;
