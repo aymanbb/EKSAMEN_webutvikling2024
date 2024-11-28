@@ -180,21 +180,23 @@ aside {
         font-weight: 750;
         }
     
-        p {
-            width: 50%;
-        }
-    
-        a {
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 0.5rem;
-        }
+    p {
+        width: 50%;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 0.5rem;
+    }
 }
 
 .banner-content {
     border-radius: 25px;
     padding: 3rem;
     margin: 0;
+
+    i.fa-arrow-left, i.fa-arrow-right {display: none;}
 }
 
 #banner-2, #banner-3 {
@@ -285,16 +287,7 @@ aside {
         padding: 0.5rem;
         opacity: 0.8;
         filter: blur(5);
-        /*
-        text-shadow: * Ikke perfekt, vil finne en erstatning senere *
-            0px 0px 0px white, * top *
-            1px 1px 0px white, * right *
-            1px 0px 0px white, * bottom *
-            0px 1px 0px white; * left *
-        */
-        
-        /* Awesome property, kanskje finn en måte å ha text-shadow
-           som backup for incompatible browsers (og få offsets til å funke) */
+        margin: 0;
         -webkit-text-stroke-width: 1.5px;
         -webkit-text-stroke-color: white;
     }
@@ -940,7 +933,6 @@ details > summary::-webkit-details-marker {
 @media only screen and (min-width: 600px) {
 
     #forside-banner {
-        height: 450px;
         display: flex;
         flex-direction: row;
         overflow-x: auto;
@@ -950,6 +942,7 @@ details > summary::-webkit-details-marker {
 
         h1 {
             margin-top: 5rem;
+            width: 30%;
         }
     }
 
@@ -973,19 +966,20 @@ details > summary::-webkit-details-marker {
     
         h1 {
             line-height: 2rem;
-            width: 42%;
+            width: 30%;
             font-weight: 750;
+            margin-top: 5rem;
             }
         
-            p {
-                width: 37%;
-            }
-        
-            a {
-                text-decoration: none;
-                font-weight: 500;
-                margin-top: 0.5rem;
-            }
+        p {
+            width: 50%;
+        }
+    
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
     }
 
     #banner-3 figcaption {
@@ -1000,6 +994,25 @@ details > summary::-webkit-details-marker {
         width: 100%;
         padding: 3rem;
         margin: 0;
+        position: relative;
+
+        i.fa-arrow-left {
+            position: absolute;
+            left: 10px;
+        }
+
+        i.fa-arrow-right {
+            position: absolute;
+            right: 10px;
+        }
+        
+        i.fa-arrow-left, i.fa-arrow-right {
+            border-radius: 50px;
+            padding: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: lightgrey;
+        }
     }
 
     #pop-products {
@@ -1137,15 +1150,16 @@ details > summary::-webkit-details-marker {
         gap: 1rem;
        /* scroll-snap-type: x mandatory;  Smooth horizontal scroll */
        /* scroll-snap-stop: always;*/
-
-        h1 {
-            margin-top: 5rem;
-        }
     }
 
     #banner-1 {
         background: url(https://picsum.photos/id/18/1100/350);
         background-size: cover;
+
+        figcaption h1{
+            margin-top: 5rem;
+            width: 30%;
+        }
     }
 
     #banner-2 {
@@ -1168,19 +1182,19 @@ details > summary::-webkit-details-marker {
     
         h1 {
             line-height: 2rem;
-            width: 42%;
+            width: 30%;
             font-weight: 750;
             }
         
-            p {
-                width: 37%;
-            }
-        
-            a {
-                text-decoration: none;
-                font-weight: 500;
-                margin-top: 0.5rem;
-            }
+        p {
+            width: 50%;
+        }
+    
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
     }
 
     #banner-3 figcaption {
@@ -1195,6 +1209,25 @@ details > summary::-webkit-details-marker {
         width: 100%;
         padding: 3rem;
         margin: 0;
+        position: relative;
+
+        i.fa-arrow-left {
+            position: absolute;
+            left: 10px;
+        }
+
+        i.fa-arrow-right {
+            position: absolute;
+            right: 10px;
+        }
+        
+        i.fa-arrow-left, i.fa-arrow-right {
+            border-radius: 50px;
+            padding: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: lightgrey;
+        }
     }
 
     #pop-btn {
