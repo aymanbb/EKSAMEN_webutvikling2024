@@ -37,15 +37,21 @@
     <header id="site-header">
         <form id="search-bar">
             <label for="search" class="visually-hidden">Søk: </label>
+            <!-- La til tekst ^ for bedre tilgjengelighet -->
             <input type="search" placeholder="søk her" id="search" aria-label="Søkefelt">
+            <!-- La til aria-label ^ for bedre tilgjengelighet -->
             <button type="submit" aria-label="Søkeknapp"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <!-- La til aria-label ^ for bedre tilgjengelighet -->
         </form>
         <nav id="site-nav">
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="index.html#pop-products">Produkter</a></li>
             </ul>
-            <a href="index.html" itemprop="logo" aria-label="Sidelogo som linker til hjemmeside"><i class="fa-brands fa-linux"></i></a>
+            <a href="index.html" itemprop="logo" aria-label="Sidelogo som linker til hjemmeside"><i class="fa-brands fa-linux">
+                <span class="visually-hidden">Hjem</span></i>
+            </a>
+            <!-- La til aria-label og lenketekst ^ for bedre tilgjengelighet -->
             <ul>
                 <li><a href="index.html#pop-categories">Kategorier</a></li>
                 <li><a href="#footer-contact">Kontakt oss</a>
@@ -53,8 +59,11 @@
         </nav>
         <nav id="customer-nav">
             <a href="#" aria-label="Link til brukerprofilen din"><i class="fa-regular fa-user"></i></a>
+            <!-- La til aria-label ^ for bedre tilgjengelighet -->
             <a href="#" aria-label="Link til favorittvarene dine"><i class="fa-regular fa-heart"></i></a>
+            <!-- La til aria-label ^ for bedre tilgjengelighet -->
             <a href="checkout.html" aria-label="Link til handlekurven din"><i class="fa-solid fa-cart-shopping"></i></a>
+            <!-- La til aria-label ^ for bedre tilgjengelighet -->
         </nav>
     </header>
     <main>
@@ -214,6 +223,7 @@
             <h2>4. BETALING</h2>
             <form id="payment-form">
                 <h3>BETAL MED KORT<i class="fa-solid fa-credit-card"></i></h3>
+                <!-- Endret header ^ for å overholde WCAG standarder -->
                 <label id="card-num-label">
                 Kortnummer
                 <input type="number" placeholder="342342****4435" id="card-number">
@@ -228,6 +238,7 @@
                 </label>
                 <p>Å betale inkl. mva.</p>
                 <h4>1 199 kr</h4>
+                <!-- Endret header ^ for å overholde WCAG standarder -->
                 <input type="submit" id="purchase-btn" value="Fullfør kjøp">
             </form>
             <p id="p-payment-terms">
@@ -261,6 +272,7 @@
                 <li itemprop="telephone"><i class="fa-solid fa-phone"></i><b>Telefon:</b> 69 60 80 00</li>
                 <li itemprop="email"><i class="fa-solid fa-envelope"></i><b>E-post:</b> halden@hiof.no</li>
                 <li itemprop="openingHours"><i class="fa-solid fa-clock"></i><b>Åpningstider:</b> Stenger 15:00</li>
+                <!-- La til schema ^ bedre for SEO -->
             </ul>
         </section>
         <section id="footer-shortcuts">
@@ -277,11 +289,26 @@
         <section id="footer-some">
             <h3>SOSIALE MEDIER</h3>
             <ul>
-                <li><a href="https://www.instagram.com" aria-label="Link til Instagram profilen vår"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com" aria-label="Link til Facebook profilen vår"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="https://www.linkedin.com" aria-label="Link til LinkedIn profilen vår"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://www.pinterest.com" aria-label="Link til Pinterest profilen vår"><i class="fa-brands fa-pinterest"></i></a></li>
-                <!-- La til aria-label ^ for bedre tilgjengelighet -->
+                <li><a href="https://www.instagram.com" aria-label="Link til Instagram profilen vår"><i class="fa-brands fa-instagram"></i></a>
+                    <span class="visually-hidden">
+                        Instragram profilen vår. <!-- La til lenketekst og aria-label ^ for bedre tilgjengelighet -->
+                    </span>
+                </li>
+                <li><a href="https://www.facebook.com" aria-label="Link til Facebook profilen vår"><i class="fa-brands fa-facebook"></i></a>
+                    <span class="visually-hidden">
+                        Facebook profilen vår. <!-- La til lenketekst og aria-label ^ for bedre tilgjengelighet -->
+                    </span>
+                </li>
+                <li><a href="https://www.linkedin.com" aria-label="Link til LinkedIn profilen vår"><i class="fa-brands fa-linkedin"></i></a>
+                    <span class="visually-hidden">
+                        LinkedIn profilen vår. <!-- La til lenketekst og aria-label ^ for bedre tilgjengelighet -->
+                    </span>
+                </li>
+                <li><a href="https://www.pinterest.com" aria-label="Link til Pinterest profilen vår"><i class="fa-brands fa-pinterest"></i></a>
+                    <span class="visually-hidden">
+                        Pinterest profilen vår. <!-- La til lenketekst og aria-label ^ for bedre tilgjengelighet -->
+                    </span>
+                </li>
             </ul>
         </section>
     </footer>

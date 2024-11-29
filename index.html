@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="ikoner/css/fontawesome.css">
     <link rel="stylesheet" href="ikoner/css/brands.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Mote nettbutikk | Hovedside</title>
+    <title>Mote nettbutikk | Forside</title>
 </head>
 <body itemscope itemtype="https://schema.org/ClothingStore"> <!-- La til schema for SEO -->
     <meta itemprop="name" content="Ayman's motebutikk">
@@ -48,8 +48,10 @@
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="#pop-products">Produkter</a></li>
             </ul>
-            <a href="index.html" itemprop="logo" aria-label="Sidelogo som linker til hjemmeside"><i class="fa-brands fa-linux"></i></a>
-            <!-- La til aria-label ^ for bedre tilgjengelighet -->
+            <a href="index.html" itemprop="logo" aria-label="Sidelogo som linker til hjemmeside"><i class="fa-brands fa-linux">
+                <span class="visually-hidden">Hjem</span></i>
+            </a>
+            <!-- La til aria-label og lenketekst ^ for bedre tilgjengelighet -->
             <ul>
                 <li><a href="#pop-categories">Kategorier</a></li>
                 <li><a href="#footer-contact">Kontakt oss</a>
@@ -74,7 +76,9 @@
                         eumque nihil impedit quo minus id quod maxime placeat
                         facere possimus
                     </p>
-                    <a href="#" class="btn" title="Trykk for å lese mer om våre produkter.">LES MER</a>
+                    <a href="#" class="btn" title="Trykk for å lese mer om våre produkter." aria-label="Les mer om våre produkter">
+                        LES MER
+                    </a>
                     <i class="fa-solid fa-arrow-left"></i>
                     <i class="fa-solid fa-arrow-right"></i>
                 </figcaption>
@@ -112,9 +116,9 @@
                 <p>Oppdag det beste av det beste</p>
             </header>
             <div id="pop-btn">
-                <a href="#" class="btn">New Product</a>
-                <a href="#" class="btn">Special Price</a>
-                <a href="#" class="btn">Best Sellers</a>
+                <a href="#" class="btn" aria-label="Se vår nyeste varer.">New Product</a>
+                <a href="#" class="btn" aria-label="Varer på tilbud.">Special Price</a>
+                <a href="#" class="btn" aria-label="Mest populære varer">Best Sellers</a>
             </div>
             <article class="product-card">
                 <picture>
@@ -123,9 +127,12 @@
                     <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet.">
                 </picture>
                 <i class="fa-regular fa-heart"></i>
-                <header itemprop="offer" itemscope itemtype="https://schema.org/Offer" class="product-header">
+                <header class="product-header">
                     <a href="product.html"><h2 itemprop="name">Product name</h2></a>
-                    <p itemprop="priceCurrency">Kr<span itemprop="price"> 1999</span></p>
+                    <!-- Endret header ^ for å overholde WCAG standarder -->
+                    <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="priceCurrency">Kr</span><span itemprop="price"> 1999</span>
+                    </p>
                     <!-- La til schema ^ for SEO -->
                 </header>
                 <ul class="product-review">
@@ -144,9 +151,12 @@
                     <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet.">
                 </picture>
                 <i class="fa-regular fa-heart"></i>
-                <header itemprop="offer" itemscope itemtype="https://schema.org/Offer" class="product-header">
+                <header class="product-header">
                     <a href="product.html"><h2 itemprop="name">Product name</h2></a>
-                    <p itemprop="priceCurrency">Kr<span itemprop="price"> 1999</span></p>
+                    <!-- Endret header ^ for å overholde WCAG standarder -->
+                    <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="priceCurrency">Kr</span><span itemprop="price"> 1999</span>
+                    </p>
                     <!-- La til schema ^ for SEO -->
                 </header>
                 <ul class="product-review">
@@ -165,9 +175,12 @@
                     <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet.">
                 </picture>
                 <i class="fa-regular fa-heart"></i>
-                <header itemprop="offer" itemscope itemtype="https://schema.org/Offer" class="product-header">
+                <header class="product-header">
                     <a href="product.html"><h2 itemprop="name">Product name</h2></a>
-                    <p itemprop="priceCurrency">Kr<span itemprop="price"> 1999</span></p>
+                    <!-- Endret header ^ for å overholde WCAG standarder -->
+                    <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="priceCurrency">Kr</span><span itemprop="price"> 1999</span>
+                    </p>
                     <!-- La til schema ^ for SEO -->
                 </header>
                 <ul class="product-review">
@@ -186,9 +199,12 @@
                     <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet.">
                 </picture>
                 <i class="fa-regular fa-heart"></i>
-                <header itemprop="offer" itemscope itemtype="https://schema.org/Offer" class="product-header">
+                <header class="product-header">
                     <a href="product.html"><h2 itemprop="name">Product name</h2></a>
-                    <p itemprop="priceCurrency">Kr<span itemprop="price"> 1999</span></p>
+                    <!-- Endret header ^ for å overholde WCAG standarder -->
+                    <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="priceCurrency">Kr</span><span itemprop="price"> 1999</span>
+                    </p>
                     <!-- La til schema ^ for SEO -->
                 </header>
                 <ul class="product-review">
@@ -207,9 +223,12 @@
                     <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet.">
                 </picture>
                 <i class="fa-regular fa-heart"></i>
-                <header itemprop="offer" itemscope itemtype="https://schema.org/Offer" class="product-header">
+                <header class="product-header">
                     <a href="product.html"><h2 itemprop="name">Product name</h2></a>
-                    <p itemprop="priceCurrency">Kr<span itemprop="price"> 1999</span></p>
+                    <!-- Endret header ^ for å overholde WCAG standarder -->
+                    <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="priceCurrency">Kr</span><span itemprop="price"> 1999</span>
+                    </p>
                     <!-- La til schema ^ for SEO -->
                 </header>
                 <ul class="product-review">
@@ -228,9 +247,12 @@
                     <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet.">
                 </picture>
                 <i class="fa-regular fa-heart"></i>
-                <header itemprop="offer" itemscope itemtype="https://schema.org/Offer" class="product-header">
+                <header class="product-header">
                     <a href="product.html"><h2 itemprop="name">Product name</h2></a>
-                    <p itemprop="priceCurrency">Kr<span itemprop="price"> 1999</span></p>
+                    <!-- Endret header ^ for å overholde WCAG standarder -->
+                    <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="priceCurrency">Kr</span><span itemprop="price"> 1999</span>
+                    </p>
                     <!-- La til schema ^ for SEO -->
                 </header>
                 <ul class="product-review">
@@ -250,7 +272,7 @@
             </header>
             <div id=cat-grid>
                 <article id="cat-1">
-                    <h2>Jakker</h2>
+                    <h2>Jakker</h2> <!-- Endret header for å overholde WCAG standarder -->
                     <picture>
                         <source media="(min-width:1024px)" srcset="images/jacket_350x300.jpg">
                         <source media="(min-width:600px)" srcset="images/jacket_720x720.jpg">
@@ -258,7 +280,7 @@
                     </picture>
                 </article>
                 <article id="cat-2">
-                    <h2>T-trøyer</h2>
+                    <h2>T-trøyer</h2> <!-- Endret header for å overholde WCAG standarder -->
                     <picture>
                         <source media="(min-width:1024px)" srcset="images/tshirt_350x300.jpg">
                         <source media="(min-width:600px)" srcset="images/tshirt_720x720.jpg">
@@ -266,7 +288,7 @@
                     </picture>
                 </article>
                 <article id="cat-3">
-                    <h2>Bukser</h2>
+                    <h2>Bukser</h2> <!-- Endret header for å overholde WCAG standarder -->
                     <picture>
                         <source media="(min-width:1024px)" srcset="images/pants_350x300.jpg">
                         <source media="(min-width:600px)" srcset="images/pants_720x720.jpg">
@@ -274,7 +296,7 @@
                     </picture>
                 </article>
                 <article id="cat-4">
-                    <h2>Sko</h2>
+                    <h2>Sko</h2> <!-- Endret header for å overholde WCAG standarder -->
                     <picture>
                         <source media="(min-width:1024px)" srcset="images/footwear_350x300.jpg">
                         <source media="(min-width:600px)" srcset="images/footwear_720x720.jpg">
@@ -282,7 +304,7 @@
                     </picture>
                 </article>
                 <article id="cat-5">
-                    <h2>Vinterklær</h2>
+                    <h2>Vinterklær</h2> <!-- Endret header for å overholde WCAG standarder -->
                     <picture>
                         <source media="(min-width:1024px)" srcset="images/winterwear_350x300.jpg">
                         <source media="(min-width:600px)" srcset="images/winterwear_720x720.jpg">
@@ -418,8 +440,8 @@
             <h3>SNARVEIER</h3>
             <nav>
                 <ul>
-                    <li><a href="index.html/#pop-products">Produkter</a></li>
-                    <li><a href="index.html/#pop-categories">Kategorier</a></li>
+                    <li><a href="#pop-products">Produkter</a></li>
+                    <li><a href="#pop-categories">Kategorier</a></li>
                     <li><a href="#footer-contact">Kontakt oss</a></li>
                     <li><a href="#">Tilgjengelighetserklæring</a></li>
                 </ul>
@@ -428,11 +450,26 @@
         <section id="footer-some">
             <h3>SOSIALE MEDIER</h3>
             <ul>
-                <li><a href="https://www.instagram.com" aria-label="Link til Instagram profilen vår"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com" aria-label="Link til Facebook profilen vår"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="https://www.linkedin.com" aria-label="Link til LinkedIn profilen vår"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://www.pinterest.com" aria-label="Link til Pinterest profilen vår"><i class="fa-brands fa-pinterest"></i></a></li>
-                <!-- La til aria-label ^ for bedre tilgjengelighet -->
+                <li><a href="https://www.instagram.com" aria-label="Link til Instagram profilen vår"><i class="fa-brands fa-instagram"></i></a>
+                    <span class="visually-hidden">
+                        Instragram profilen vår. <!-- La til lenketekst og aria-label ^ for bedre tilgjengelighet -->
+                    </span>
+                </li>
+                <li><a href="https://www.facebook.com" aria-label="Link til Facebook profilen vår"><i class="fa-brands fa-facebook"></i></a>
+                    <span class="visually-hidden">
+                        Facebook profilen vår. <!-- La til lenketekst og aria-label ^ for bedre tilgjengelighet -->
+                    </span>
+                </li>
+                <li><a href="https://www.linkedin.com" aria-label="Link til LinkedIn profilen vår"><i class="fa-brands fa-linkedin"></i></a>
+                    <span class="visually-hidden">
+                        LinkedIn profilen vår. <!-- La til lenketekst og aria-label ^ for bedre tilgjengelighet -->
+                    </span>
+                </li>
+                <li><a href="https://www.pinterest.com" aria-label="Link til Pinterest profilen vår"><i class="fa-brands fa-pinterest"></i></a>
+                    <span class="visually-hidden">
+                        Pinterest profilen vår. <!-- La til lenketekst og aria-label ^ for bedre tilgjengelighet -->
+                    </span>
+                </li>
             </ul>
         </section>
     </footer>
