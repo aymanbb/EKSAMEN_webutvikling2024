@@ -32,26 +32,25 @@
     <meta itemprop="priceRange" content="$$$">
     <header id="site-header">
         <form id="search-bar">
-            <label>
-                <input type="search" placeholder="søk her" id="search">
-            </label>
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <label for="search" class="visually-hidden">Søk: </label>
+            <input type="search" placeholder="søk her" id="search" aria-label="Søkefelt">
+            <button type="submit" aria-label="Søkeknapp"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         <nav id="site-nav">
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="index.html#pop-products">Produkter</a></li>
             </ul>
-            <a href="index.html"><i class="fa-brands fa-linux"></i></a>
+            <a href="index.html" itemprop="logo" aria-label="Sidelogo som linker til hjemmeside"><i class="fa-brands fa-linux"></i></a>
             <ul>
                 <li><a href="index.html#pop-categories">Kategorier</a></li>
                 <li><a href="#footer-contact">Kontakt oss</a>
             </ul>
         </nav>
         <nav id="customer-nav">
-            <a href="#"><i class="fa-regular fa-user"></i></a>
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
-            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" aria-label="Link til brukerprofilen din"><i class="fa-regular fa-user"></i></a>
+            <a href="#" aria-label="Link til favorittvarene dine"><i class="fa-regular fa-heart"></i></a>
+            <a href="checkout.html" aria-label="Link til handlekurven din"><i class="fa-solid fa-cart-shopping"></i></a>
         </nav>
     </header>
     <main>
@@ -89,13 +88,13 @@
                 </figure>
                 <div id="product-info-container">
                     <header itemscope itemtype="https://schema.org/Offer" id="product-info">
-                        <h2 itemprop="name">Produktnavn</h2>
+                        <h1 itemprop="name">Produktnavn</h1>
                         <a href="#">MERKENAVN</a>
                         <p><span itemprop="price">5 195</span><span itemprop="priceCurrency"> kr</span> inkl. mva.</p>
                         <p>Farge: <b>beige</b></p>
                     </header>
-                    <label for="size-menu"></label>
-                    <select id="size-menu" name="size"> <!-- Add label -->
+                    <label for="size-menu" class="visually-hidden">Størrelsesmeny</label>
+                    <select id="size-menu" name="size" aria-label="Størrelsesmeny">
                         <option>Velg størrelse</option>
                         <option>XS</option>
                         <option>S</option>
@@ -105,7 +104,7 @@
                     </select>
                     <div id="product-actions">
                         <form>
-                            <label for="add-cart"></label>
+                            <label for="add-cart" class="visually-hidden">Legg produkten i handlekurven din</label>
                             <input type="submit" value="Legg i handlekurv" id="add-cart">
                         </form>
                         <i class="fa-regular fa-heart"></i>
@@ -266,7 +265,7 @@
                             </span>
                         </summary>
                         <article class="review-card">
-                            <h5>Rober Labador</h5>
+                            <p>Rober Labador</p>
                             <p>02/10-2024</p>
                             <ul class="product-review">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -304,7 +303,7 @@
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-regular fa-star"></i></li>
-                            <li><h5>842 Reviews</h5></li>
+                            <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -322,7 +321,7 @@
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-regular fa-star"></i></li>
-                            <li><h5>842 Reviews</h5></li>
+                            <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -340,7 +339,7 @@
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-regular fa-star"></i></li>
-                            <li><h5>842 Reviews</h5></li>
+                            <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -358,7 +357,7 @@
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-regular fa-star"></i></li>
-                            <li><h5>842 Reviews</h5></li>
+                            <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -376,7 +375,7 @@
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-regular fa-star"></i></li>
-                            <li><h5>842 Reviews</h5></li>
+                            <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
                     <article class="product-card">
@@ -394,7 +393,7 @@
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-regular fa-star"></i></li>
-                            <li><h5>842 Reviews</h5></li>
+                            <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
                 </div>
@@ -408,7 +407,7 @@
             <p itemprop="slogan">Vi er de beste på det vi gjør!</p>
         </section>
         <section id="footer-contact">
-            <h4>KONTAKT</h4>
+            <h3>KONTAKT</h3>
             <ul>
                 <li itemprop="address"><i class="fa-solid fa-location-dot"></i><b>Adresse:</b> B R A veien 4, 1757 Halden</li>
                 <li itemprop="telephone"><i class="fa-solid fa-phone"></i><b>Telefon:</b> 69 60 80 00</li>
@@ -417,23 +416,23 @@
             </ul>
         </section>
         <section id="footer-shortcuts">
-            <h4>SNARVEIER</h4>
+            <h3>SNARVEIER</h3>
             <nav>
                 <ul>
-                    <li><a href="index.html/#pop-products">Produkter</a></li>
-                    <li><a href="index.html/#pop-categories">Kategorier</a></li>
+                    <li><a href="index.html#pop-products">Produkter</a></li>
+                    <li><a href="index.html#pop-categories">Kategorier</a></li>
                     <li><a href="#footer-contact">Kontakt oss</a></li>
                     <li><a href="#">Tilgjengelighetserklæring</a></li>
                 </ul>
             </nav>
         </section>
         <section id="footer-some">
-            <h4>SOSIALE MEDIER</h4>
+            <h3>SOSIALE MEDIER</h3>
             <ul>
-                <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="https://www.instagram.com" aria-label="Link til Instagram profilen vår"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com" aria-label="Link til Facebook profilen vår"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com" aria-label="Link til LinkedIn profilen vår"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.pinterest.com" aria-label="Link til Pinterest profilen vår"><i class="fa-brands fa-pinterest"></i></a></li>
             </ul>
         </section>
     </footer>
