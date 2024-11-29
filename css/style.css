@@ -295,20 +295,21 @@ aside {
         width: 100%;
         padding-top: 10px;
 
-        h3 {
-            
-            a {
-                font-weight: 800;
-                font-size: 1.2rem;
-                text-decoration: none;
-                color: #000000;
-            }
+        a {
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #000000;
         }
 
         p {
             display: inline-block;
             align-self: center;
         }
+    }
+
+    span {
+        align-self: start;
     }
 }
 
