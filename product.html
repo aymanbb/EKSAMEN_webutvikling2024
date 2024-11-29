@@ -27,10 +27,12 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Min nettbutikk | FASHION</title>
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/ClothingStore">
+    <meta itemprop="name" content="Ayman's motebutikk">
+    <meta itemprop="priceRange" content="$$$">
     <header id="site-header">
         <form id="search-bar">
-            <label>     <!-- Sjekk ut dette ('for' osv.) -->
+            <label>
                 <input type="search" placeholder="søk her" id="search">
             </label>
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -67,12 +69,12 @@
                     <picture id="big-pic">
                         <source media="(min-width:1024px)" srcset="images/outfit_476x700.jpg">
                         <source media="(min-width:500px)" srcset="images/outfit_340x720.jpg"> <!-- 500px istedenfor 600px med vilje, synes det gir bedre overgang med resolusjon -->
-                        <img id="main-pic" src="images/outfit_220x450.jpg" alt="">
+                        <img itemprop="image" id="main-pic" src="images/outfit_220x450.jpg" alt="">
                     </picture>
                     <picture class="smol-pics" id="smol-pic-1">
                         <source media="(min-width:1024px)" srcset="images/outfit_207x223.jpg">
                         <source media="(min-width:500px)" srcset="images/outfit_240x240.jpg">
-                        <img src="images/outfit_150x150.jpg" alt="">
+                        <img itemprop="image" src="images/outfit_150x150.jpg" alt="">
                     </picture>
                     <picture class="smol-pics" id="smol-pic-2">
                         <source media="(min-width:1024px)" srcset="images/outfit_207x223.jpg">
@@ -86,12 +88,13 @@
                     </picture>
                 </figure>
                 <div id="product-info-container">
-                    <header id="product-info">
-                        <h2>Produktnavn</h2>
+                    <header itemscope itemtype="https://schema.org/Offer" id="product-info">
+                        <h2 itemprop="name">Produktnavn</h2>
                         <a href="#">MERKENAVN</a>
-                        <p>5 195 kr inkl. mva.</p>
+                        <p><span itemprop="price">5 195</span><span itemprop="priceCurrency"> kr</span> inkl. mva.</p>
                         <p>Farge: <b>beige</b></p>
                     </header>
+                    <label for="size-menu"></label>
                     <select id="size-menu" name="size"> <!-- Add label -->
                         <option>Velg størrelse</option>
                         <option>XS</option>
@@ -117,7 +120,7 @@
                     </details>
                     <details id="prod-details">
                         <summary>Produktdetaljer</summary>
-                        <p>
+                        <p itemprop="description">
                             Epcot is a theme park at Walt Disney World Resort featuring 
                             exciting attractions, international pavilions, award-winning 
                             fireworks and seasonal special events.
