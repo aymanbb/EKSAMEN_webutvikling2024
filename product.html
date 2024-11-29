@@ -68,22 +68,22 @@
                     <picture id="big-pic">
                         <source media="(min-width:1024px)" srcset="images/outfit_476x700.jpg">
                         <source media="(min-width:500px)" srcset="images/outfit_340x720.jpg"> <!-- 500px istedenfor 600px med vilje, synes det gir bedre overgang med resolusjon -->
-                        <img itemprop="image" id="main-pic" src="images/outfit_220x450.jpg" alt="">
+                        <img itemprop="image" id="main-pic" src="images/outfit_220x450.jpg" alt="Modell i et fancy, gul og rød antrekk.">
                     </picture>
                     <picture class="smol-pics" id="smol-pic-1">
                         <source media="(min-width:1024px)" srcset="images/outfit_207x223.jpg">
                         <source media="(min-width:500px)" srcset="images/outfit_240x240.jpg">
-                        <img itemprop="image" src="images/outfit_150x150.jpg" alt="">
+                        <img itemprop="image" src="images/outfit_150x150.jpg" alt="Modell i et fancy, gul og rød antrekk.">
                     </picture>
                     <picture class="smol-pics" id="smol-pic-2">
                         <source media="(min-width:1024px)" srcset="images/outfit_207x223.jpg">
                         <source media="(min-width:500px)" srcset="images/outfit_240x240.jpg">
-                        <img src="images/outfit_150x150.jpg" alt="">
+                        <img src="images/outfit_150x150.jpg" alt="Modell i et fancy, gul og rød antrekk.">
                     </picture>
                     <picture class="smol-pics" id="smol-pic-3">
                         <source media="(min-width:1024px)" srcset="images/outfit_207x223.jpg">
                         <source media="(min-width:500px)" srcset="images/outfit_240x240.jpg">
-                        <img src="images/outfit_150x150.jpg" alt="">
+                        <img src="images/outfit_150x150.jpg" alt="Modell i et fancy, gul og rød antrekk.">
                     </picture>
                 </figure>
                 <div id="product-info-container">
@@ -264,9 +264,9 @@
                                 32
                             </span>
                         </summary>
-                        <article class="review-card">
-                            <p>Rober Labador</p>
-                            <p>02/10-2024</p>
+                        <article itemprop="review" itemscope itemtype="https://schema.org/Review" class="review-card">
+                            <p itemprop="author">Rober Labador</p>
+                            <p itemprop="datePublished">02/10-2024</p>
                             <ul class="product-review">
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -274,10 +274,15 @@
                                 <li><i class="fa-regular fa-star"></i></li>
                                 <li><i class="fa-regular fa-star"></i></li>
                             </ul>
-                            <p>
+                            <p itemprop="reviewBody">
                                 Nam libero tempore, cum soluta nobis est eligendi
                                 optio sumque nihil impedit quo minus id quod.
                             </p>
+                            <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                                <meta itemprop="worstRating" content="1">
+                                <meta itemprop="bestRating" content="5">
+                                <meta itemprop="ratingValue" content="3">
+                            </span>
                         </article>
                     </details>
                 </div>
@@ -290,7 +295,7 @@
                 <div class="scroll-container" id="scroll-related">
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -308,7 +313,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -326,7 +331,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -344,7 +349,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -362,7 +367,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -380,7 +385,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
