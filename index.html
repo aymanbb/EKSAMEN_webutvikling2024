@@ -32,26 +32,25 @@
     <meta itemprop="priceRange" content="$$$">
     <header id="site-header">
         <form id="search-bar">
-            <label>
-                <input type="search" placeholder="søk her" id="search">
-                </label>
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <label for="search" class="visually-hidden">Søk: </label>
+            <input type="search" placeholder="søk her" id="search" aria-label="Søkefelt">
+            <button type="submit" aria-label="Søkeknapp"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         <nav id="site-nav">
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="#pop-products">Produkter</a></li>
             </ul>
-            <a href="index.html" itemprop="logo"><i class="fa-brands fa-linux"></i></a>
+            <a href="index.html" itemprop="logo" aria-label="Sidelogo som linker til hjemmeside"><i class="fa-brands fa-linux"></i></a>
             <ul>
                 <li><a href="#pop-categories">Kategorier</a></li>
                 <li><a href="#footer-contact">Kontakt oss</a>
             </ul>
         </nav>
         <nav id="customer-nav">
-            <a href="#"><i class="fa-regular fa-user"></i></a>
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
-            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" aria-label="Link til brukerprofilen din"><i class="fa-regular fa-user"></i></a>
+            <a href="#" aria-label="Link til favorittvarene dine"><i class="fa-regular fa-heart"></i></a>
+            <a href="checkout.html" aria-label="Link til handlekurven din"><i class="fa-solid fa-cart-shopping"></i></a>
         </nav>
     </header>
     <main>
@@ -110,27 +109,7 @@
                 <picture>
                     <source media="(min-width:1024px)" srcset="images/jeans_390x320.jpg">
                     <source media="(min-width:600px)" srcset="images/jeans_300x250.jpg">
-                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="">
-                </picture>
-                <i class="fa-regular fa-heart"></i>
-                <header itemscope itemtype="https://schema.org/Offer" class="product-header">
-                    <a href="product.html"><h3 itemprop="name">Product name</h3></a>
-                    <p itemprop="priceCurrency">NOK<span itemprop="price"> 1999</span></p>
-                </header>
-                <ul class="product-review">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li><p>842 Reviews</p></li>
-                </ul>
-            </article>
-            <article class="product-card">
-                <picture>
-                    <source media="(min-width:1024px)" srcset="images/jeans_390x320.jpg">
-                    <source media="(min-width:600px)" srcset="images/jeans_300x250.jpg">
-                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="">
+                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet">
                 </picture>
                 <i class="fa-regular fa-heart"></i>
                 <header itemscope itemtype="https://schema.org/Offer" class="product-header">
@@ -150,7 +129,7 @@
                 <picture>
                     <source media="(min-width:1024px)" srcset="images/jeans_390x320.jpg">
                     <source media="(min-width:600px)" srcset="images/jeans_300x250.jpg">
-                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="">
+                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet">
                 </picture>
                 <i class="fa-regular fa-heart"></i>
                 <header itemscope itemtype="https://schema.org/Offer" class="product-header">
@@ -170,7 +149,7 @@
                 <picture>
                     <source media="(min-width:1024px)" srcset="images/jeans_390x320.jpg">
                     <source media="(min-width:600px)" srcset="images/jeans_300x250.jpg">
-                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="">
+                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet">
                 </picture>
                 <i class="fa-regular fa-heart"></i>
                 <header itemscope itemtype="https://schema.org/Offer" class="product-header">
@@ -190,7 +169,7 @@
                 <picture>
                     <source media="(min-width:1024px)" srcset="images/jeans_390x320.jpg">
                     <source media="(min-width:600px)" srcset="images/jeans_300x250.jpg">
-                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="">
+                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet">
                 </picture>
                 <i class="fa-regular fa-heart"></i>
                 <header itemscope itemtype="https://schema.org/Offer" class="product-header">
@@ -210,7 +189,27 @@
                 <picture>
                     <source media="(min-width:1024px)" srcset="images/jeans_390x320.jpg">
                     <source media="(min-width:600px)" srcset="images/jeans_300x250.jpg">
-                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="">
+                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet">
+                </picture>
+                <i class="fa-regular fa-heart"></i>
+                <header itemscope itemtype="https://schema.org/Offer" class="product-header">
+                    <a href="product.html"><h3 itemprop="name">Product name</h3></a>
+                    <p itemprop="priceCurrency">Kr<span itemprop="price"> 1999</span></p>
+                </header>
+                <ul class="product-review">
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><p>842 Reviews</p></li>
+                </ul>
+            </article>
+            <article class="product-card">
+                <picture>
+                    <source media="(min-width:1024px)" srcset="images/jeans_390x320.jpg">
+                    <source media="(min-width:600px)" srcset="images/jeans_300x250.jpg">
+                    <img itemprop="image" src="images/jeans_350x350.jpg" alt="Mørk blå jeans av høy kvalitet">
                 </picture>
                 <i class="fa-regular fa-heart"></i>
                 <header itemscope itemtype="https://schema.org/Offer" class="product-header">
@@ -234,43 +233,43 @@
             </header>
             <div id=cat-grid>
                 <article id="cat-1">
-                    <h2>Jakker</h2>
+                    <h1>Jakker</h1>
                     <picture>
                         <source media="(min-width:1024px)" srcset="images/jacket_350x300.jpg">
                         <source media="(min-width:600px)" srcset="images/jacket_720x720.jpg">
-                        <img itemprop="image" src="images/jacket_350x350.jpg" alt="">
+                        <img itemprop="image" src="images/jacket_350x350.jpg" alt="A happy customer wearing our jacket">
                     </picture>
                 </article>
                 <article id="cat-2">
-                    <h2>T-trøyer</h2>
+                    <h1>T-trøyer</h1>
                     <picture>
                         <source media="(min-width:1024px)" srcset="images/tshirt_350x300.jpg">
                         <source media="(min-width:600px)" srcset="images/tshirt_720x720.jpg">
-                        <img src="images/tshirt_350x350.jpg" alt="">
+                        <img src="images/tshirt_350x350.jpg" alt="A ton of t-shirts">
                     </picture>
                 </article>
                 <article id="cat-3">
-                    <h2>Bukser</h2>
+                    <h1>Bukser</h1>
                     <picture>
                         <source media="(min-width:1024px)" srcset="images/pants_350x300.jpg">
                         <source media="(min-width:600px)" srcset="images/pants_720x720.jpg">
-                        <img src="images/pants_350x350.jpg" alt="">
+                        <img src="images/pants_350x350.jpg" alt="Stack of pants">
                     </picture>
                 </article>
                 <article id="cat-4">
-                    <h2>Sko</h2>
+                    <h1>Sko</h1>
                     <picture>
                         <source media="(min-width:1024px)" srcset="images/footwear_350x300.jpg">
                         <source media="(min-width:600px)" srcset="images/footwear_720x720.jpg">
-                        <img src="images/footwear_350x350.jpg" alt="">
+                        <img src="images/footwear_350x350.jpg" alt="A bunch of dress shoes">
                     </picture>
                 </article>
                 <article id="cat-5">
-                    <h2>Vinterklær</h2>
+                    <h1>Vinterklær</h1>
                     <picture>
                         <source media="(min-width:1024px)" srcset="images/winterwear_350x300.jpg">
                         <source media="(min-width:600px)" srcset="images/winterwear_720x720.jpg">
-                        <img src="images/winterwear_350x350.jpg" alt="">
+                        <img src="images/winterwear_350x350.jpg" alt="Sansa Stark in winter clothing">
                     </picture>
                 </article>
             </div>     
@@ -402,10 +401,10 @@
         <section id="footer-some">
             <h4>SOSIALE MEDIER</h4>
             <ul>
-                <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="https://www.instagram.com" aria-label="Link til Instagram profilen vår"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com" aria-label="Link til Facebook profilen vår"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com" aria-label="Link til LinkedIn profilen vår"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.pinterest.com" aria-label="Link til Pinterest profilen vår"><i class="fa-brands fa-pinterest"></i></a></li>
             </ul>
         </section>
     </footer>
