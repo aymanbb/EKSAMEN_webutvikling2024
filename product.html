@@ -38,7 +38,7 @@
         <form id="search-bar">
             <label for="search" class="visually-hidden">Søk: </label>
             <!-- La til tekst ^ for bedre tilgjengelighet -->
-            <input type="search" placeholder="søk her" id="search" aria-label="Søkefelt">
+            <input type="search" placeholder="søk her" id="search" aria-label="Søkefelt" pattern="[^'\x22]+">
             <!-- La til aria-label ^ for bedre tilgjengelighet -->
             <button type="submit" aria-label="Søkeknapp"><i class="fa-solid fa-magnifying-glass"></i></button>
             <!-- La til aria-label ^ for bedre tilgjengelighet -->
@@ -451,7 +451,7 @@
                     <li><a href="index.html#pop-products">Produkter</a></li>
                     <li><a href="index.html#pop-categories">Kategorier</a></li>
                     <li><a href="#footer-contact">Kontakt oss</a></li>
-                    <li><a href="#">Tilgjengelighetserklæring</a></li>
+                    <li><a href="Tilgjengelighetserklæring.pdf">Tilgjengelighetserklæring</a></li>
                 </ul>
             </nav>
         </section>

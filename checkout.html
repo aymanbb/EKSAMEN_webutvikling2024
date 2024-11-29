@@ -38,7 +38,7 @@
         <form id="search-bar">
             <label for="search" class="visually-hidden">Søk: </label>
             <!-- La til tekst ^ for bedre tilgjengelighet -->
-            <input type="search" placeholder="søk her" id="search" aria-label="Søkefelt">
+            <input type="search" placeholder="søk her" id="search" aria-label="Søkefelt" pattern="[^'\x22]+">
             <!-- La til aria-label ^ for bedre tilgjengelighet -->
             <button type="submit" aria-label="Søkeknapp"><i class="fa-solid fa-magnifying-glass"></i></button>
             <!-- La til aria-label ^ for bedre tilgjengelighet -->
@@ -156,32 +156,32 @@
                 <p id="p-address">Leveringsadresse</p>
                 <label>
                     Fornavn
-                    <input type="text" placeholder="Nora*" id="fname">
+                    <input type="text" placeholder="Nora*" id="fname" pattern="[a-zA-Z]{1,25}" maxlength="25" required>
                 </label>
                 <label>
                     Etternavn
-                    <input type="text" placeholder="Nordman*" id="lname">
+                    <input type="text" placeholder="Nordman*" id="lname" pattern="[a-zA-Z]{1,25}" maxlength="25" required>
                 </label>
                 <label id="address-label">
                     Gateadresse
-                    <input type="text" placeholder="BRA veien 4*" id="address">
+                    <input type="text" placeholder="BRA veien 4*" id="address" pattern="[a-zA-Z0-9\s]+" required>
                 </label>
                 <label>
                     Postnummer
-                    <input type="number" placeholder="1752*" id="postcode" min="1" max="9999">
+                    <input type="number" placeholder="1752*" id="postcode" min="1" max="9999" required>
                 </label>
                 <label>
                     Poststed
-                    <input type="text" placeholder="Halden*" id="postarea">
+                    <input type="text" placeholder="Halden*" id="postarea" pattern="[a-zA-Z]{1,25}" maxlength="25" required>
                 </label>
                 <p id="p-contactinfo">Kontaktinformasjon</p>
                 <label id="email-label">
                     E-post
-                    <input type="email" placeholder="aymanb@hiof.no" id="email">
+                    <input type="email" placeholder="aymanb@hiof.no" id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
                 </label>
                 <label id="phone-label">
                     Telefon
-                    <input type="tel" placeholder="+4749***018" id="phone">
+                    <input type="tel" placeholder="+4749***018" id="phone" pattern="[0-9]" required>
                 </label>
                 <input type="submit" value="Lagre" id="save-btn">
                 <a href="#">Avbryt</a>
@@ -225,16 +225,16 @@
                 <h3>BETAL MED KORT<i class="fa-solid fa-credit-card"></i></h3>
                 <!-- Endret header ^ for å overholde WCAG standarder -->
                 <label id="card-num-label">
-                Kortnummer
-                <input type="number" placeholder="342342****4435" id="card-number">
+                    Kortnummer
+                    <input type="number" placeholder="342342****4435" id="card-number" required>
                 </label>
                 <label>
-                Utløpsdato
-                <input type="date" id="card-date">
+                    Utløpsdato
+                    <input type="date" id="card-date" required>
                 </label>
                 <label>
-                CVC/CVV
-                <input type="number" placeholder="CVC/CVV" id="card-cvc">
+                    CVC/CVV
+                    <input type="number" placeholder="CVC/CVV" id="card-cvc" required>
                 </label>
                 <p>Å betale inkl. mva.</p>
                 <h4>1 199 kr</h4>
@@ -282,7 +282,7 @@
                     <li><a href="index.html#pop-products">Produkter</a></li>
                     <li><a href="index.html#pop-categories">Kategorier</a></li>
                     <li><a href="#footer-contact">Kontakt oss</a></li>
-                    <li><a href="#">Tilgjengelighetserklæring</a></li>
+                    <li><a href="Tilgjengelighetserklæring.pdf">Tilgjengelighetserklæring</a></li>
                 </ul>
             </nav>
         </section>
