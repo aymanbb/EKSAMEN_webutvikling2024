@@ -43,18 +43,18 @@ h3, h4 {
     font-weight: 600;
 }
 
-.snarvei {
+#snarvei {
     position: absolute;
     left: -2000px;
     top: 0px;
     color: black;
 }
     
-    .snarvei:focus {
+#snarvei:focus {
     left: 0px;
 }
 
-.hopp-topp {
+#hopp-topp {
     position: absolute;
     right: 0px;
     bottom: 0px;
@@ -641,7 +641,7 @@ footer {
         font-weight: 400;
     }
 
-    h1 {
+    h2 {
         margin-bottom: 0.5rem;
     }
 }
@@ -916,11 +916,11 @@ details > summary::-webkit-details-marker {
         flex-direction: column;
     }
 
-    h3, p {align-self: center;}
+    h4, p {align-self: center;}
 
-    h3 {
+    h4 {
         font-weight: 800;
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     i {padding-left: 0.5rem;}
@@ -1283,22 +1283,13 @@ details > summary::-webkit-details-marker {
         }
     }
 
-       /* .product-card {
-
-        .rec-prod-img {
-            min-width: 250px;
-            min-height: 250px;
-        }
-    } */
-
     /* checkout.html */
 
     .checkout-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2.5rem 15rem; /* Foretrekker width: 65% i .checkout-product osv., 
-                                  men dette er enklere siden h2 er utenfor og den må være perfekt :)*/
+        padding: 2.5rem 15rem;
 
         h2 {align-self: flex-start;}
     }
@@ -1421,7 +1412,7 @@ details > summary::-webkit-details-marker {
         width: 100%;
     }
 
-    h4 {
+    h3 {
         grid-column: 1/3;
         grid-row: 1/2;
     }
@@ -1448,7 +1439,7 @@ details > summary::-webkit-details-marker {
         font-size: 1.3rem;
     }
 
-    #payment-form h3 {
+    #payment-form h4 {
         grid-column: 1/3;
         grid-row: 5/6;
         justify-self: center;

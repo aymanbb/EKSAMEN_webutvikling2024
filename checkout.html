@@ -25,11 +25,15 @@
     <link rel="stylesheet" href="ikoner/css/fontawesome.css">
     <link rel="stylesheet" href="ikoner/css/brands.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Min nettbutikk | FASHION</title>
+    <title>Mote nettbutikk | Kasse</title>
 </head>
-<body itemscope itemtype="https://schema.org/ClothingStore">
+<body itemscope itemtype="https://schema.org/ClothingStore"> <!-- La til schema for SEO -->
     <meta itemprop="name" content="Ayman's motebutikk">
+    <!-- La til schema ^ for SEO -->
     <meta itemprop="priceRange" content="$$$">
+    <!-- La til schema ^ for SEO -->
+    <a href="#pop-categories" id="snarvei" aria-label="Skip to main content.">Hopp til hovedinnholdet</a>
+    <a href="#site-header" id="hopp-topp" aria-label="Jump back to top of the page.">Hopp til toppen av siden</a>
     <header id="site-header">
         <form id="search-bar">
             <label for="search" class="visually-hidden">Søk: </label>
@@ -177,7 +181,7 @@
         <section class="checkout-container">
             <h2>3. LEVERING</h2>
             <form id="delivery-form">
-                <h4>LEVERINGSVALG</h4>
+                <h3>LEVERINGSVALG</h3>
                 <label>
                     <input type="radio" id="express-home" name="choice">
                     <span class="delivery-type">Express Hjemlevering</span>     
@@ -209,7 +213,7 @@
         <section class="checkout-container">
             <h2>4. BETALING</h2>
             <form id="payment-form">
-                <h4>BETAL MED KORT<i class="fa-solid fa-credit-card"></i></h4>
+                <h3>BETAL MED KORT<i class="fa-solid fa-credit-card"></i></h3>
                 <label id="card-num-label">
                 Kortnummer
                 <input type="number" placeholder="342342****4435" id="card-number">
@@ -223,7 +227,7 @@
                 <input type="number" placeholder="CVC/CVV" id="card-cvc">
                 </label>
                 <p>Å betale inkl. mva.</p>
-                <h3>1 199 kr</h3>
+                <h4>1 199 kr</h4>
                 <input type="submit" id="purchase-btn" value="Fullfør kjøp">
             </form>
             <p id="p-payment-terms">
@@ -277,6 +281,7 @@
                 <li><a href="https://www.facebook.com" aria-label="Link til Facebook profilen vår"><i class="fa-brands fa-facebook"></i></a></li>
                 <li><a href="https://www.linkedin.com" aria-label="Link til LinkedIn profilen vår"><i class="fa-brands fa-linkedin"></i></a></li>
                 <li><a href="https://www.pinterest.com" aria-label="Link til Pinterest profilen vår"><i class="fa-brands fa-pinterest"></i></a></li>
+                <!-- La til aria-label ^ for bedre tilgjengelighet -->
             </ul>
         </section>
     </footer>

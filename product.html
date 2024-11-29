@@ -25,11 +25,15 @@
     <link rel="stylesheet" href="ikoner/css/fontawesome.css">
     <link rel="stylesheet" href="ikoner/css/brands.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Min nettbutikk | FASHION</title>
+    <title>Mote nettbutikk | Produktnavn</title>
 </head>
-<body itemscope itemtype="https://schema.org/ClothingStore">
+<body itemscope itemtype="https://schema.org/ClothingStore"> <!-- La til schema for SEO -->
     <meta itemprop="name" content="Ayman's motebutikk">
+    <!-- La til schema ^ for SEO -->
     <meta itemprop="priceRange" content="$$$">
+    <!-- La til schema ^ for SEO -->
+    <a href="#pop-categories" id="snarvei">Hopp til hovedinnholdet</a>
+    <a href="#site-header" id="hopp-topp">Hopp til toppen av siden</a>
     <header id="site-header">
         <form id="search-bar">
             <label for="search" class="visually-hidden">Søk: </label>
@@ -62,7 +66,7 @@
         </ul>
         </nav>
         <section id="product-menu">
-            <h2 class="visually-hidden">Produktnavn</h2>
+            <h1 class="visually-hidden">Produktnavn</h1>
             <article>
                 <figure id="product-pics">
                     <picture id="big-pic">
@@ -87,13 +91,14 @@
                     </picture>
                 </figure>
                 <div id="product-info-container">
-                    <header itemscope itemtype="https://schema.org/Offer" id="product-info">
-                        <h1 itemprop="name">Produktnavn</h1>
+                    <header itemprop="offer" itemscope itemtype="https://schema.org/Offer" id="product-info">
+                        <h2 itemprop="name">Produktnavn</h2>
                         <a href="#">MERKENAVN</a>
                         <p><span itemprop="price">5 195</span><span itemprop="priceCurrency"> kr</span> inkl. mva.</p>
                         <p>Farge: <b>beige</b></p>
                     </header>
                     <label for="size-menu" class="visually-hidden">Størrelsesmeny</label>
+                    <!-- La skjult tekst, og aria-label for tilgjengelighet -->
                     <select id="size-menu" name="size" aria-label="Størrelsesmeny">
                         <option>Velg størrelse</option>
                         <option>XS</option>
@@ -105,6 +110,7 @@
                     <div id="product-actions">
                         <form>
                             <label for="add-cart" class="visually-hidden">Legg produkten i handlekurven din</label>
+                            <!-- La til skjult tekst for tilgjengelighet -->
                             <input type="submit" value="Legg i handlekurv" id="add-cart">
                         </form>
                         <i class="fa-regular fa-heart"></i>
@@ -265,8 +271,10 @@
                             </span>
                         </summary>
                         <article itemprop="review" itemscope itemtype="https://schema.org/Review" class="review-card">
+                            <!-- La til schema ^ for bedre SEO -->
                             <p itemprop="author">Rober Labador</p>
                             <p itemprop="datePublished">02/10-2024</p>
+                            <!-- La til schema ^ for bedre SEO -->
                             <ul class="product-review">
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -295,7 +303,7 @@
                 <div class="scroll-container" id="scroll-related">
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.y">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -313,7 +321,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.y">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -331,7 +339,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.y">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -349,7 +357,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.y">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -367,7 +375,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.y">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -385,7 +393,7 @@
                     </article>
                     <article class="product-card">
                         <picture>
-                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.">
+                            <img class="rec-prod-img" src="images/jeans_250x250.jpg" alt="Mørk blå jeans av høy kvalitet.y">
                         </picture>
                         <i class="fa-regular fa-heart"></i>
                         <header class="product-header">
@@ -438,6 +446,7 @@
                 <li><a href="https://www.facebook.com" aria-label="Link til Facebook profilen vår"><i class="fa-brands fa-facebook"></i></a></li>
                 <li><a href="https://www.linkedin.com" aria-label="Link til LinkedIn profilen vår"><i class="fa-brands fa-linkedin"></i></a></li>
                 <li><a href="https://www.pinterest.com" aria-label="Link til Pinterest profilen vår"><i class="fa-brands fa-pinterest"></i></a></li>
+                <!-- La til aria-label ^ for bedre tilgjengelighet -->
             </ul>
         </section>
     </footer>
